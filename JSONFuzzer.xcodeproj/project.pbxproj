@@ -13,13 +13,18 @@
 		6B87608DD3921643F59EB9B9 /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87681319DA1072F4F59426 /* Mutation.h */; };
 		6B8761A2E11C21210E14EA70 /* RangeRNG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87695860E8517D419625FC /* RangeRNG.m */; };
 		6B8761E3D650AE2265882CD4 /* ConstantRNGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8768DC66A6AFD60BF2426D /* ConstantRNGTest.m */; };
+		6B876379FF5E338C0F60A10E /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
+		6B87642E0D5E91906D83315F /* ReplaceNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87664F901EF4B9F6271F49 /* ReplaceNodeMutation.m */; };
 		6B8764D50673BBA4C41E0F61 /* ConstantRNG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8767D2399CF7199E55779B /* ConstantRNG.m */; };
 		6B876525137568207B62CF72 /* DeleteNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */; };
+		6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876477B311AC55E096226B /* ReplaceNodeMutation.h */; };
 		6B876744A53CFDB3C8B6253C /* RandomNumberGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876890652116D6EF2E8FF4 /* RandomNumberGenerator.h */; };
+		6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */; };
 		6B8768A226C9A2A7D3345D1B /* DeleteNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87680E869BB15D27780608 /* DeleteNodeMutation.h */; };
 		6B8769C9C3D8B514737E8C91 /* RangeRNGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876E83DD13509924A8B0DA /* RangeRNGTest.m */; };
 		6B876A29F847CA1D8B53334F /* ConstantRNG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87664FF4767167A1010221 /* ConstantRNG.h */; };
 		6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
+		6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* NodeReplacement.h */; };
 		6B876CE63EBBC4FAE827FB1D /* RangeRNG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8760D547029B37B6AD0E37 /* RangeRNG.h */; };
 /* End PBXBuildFile section */
 
@@ -53,11 +58,16 @@
 		46932EF61C8E175400B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46932EFE1C8E177200B4903F /* MutationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932F021C8E177200B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeReplacement.m; sourceTree = "<group>"; };
 		6B8760D547029B37B6AD0E37 /* RangeRNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeRNG.h; sourceTree = "<group>"; };
 		6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutation.m; sourceTree = "<group>"; };
+		6B876477B311AC55E096226B /* ReplaceNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceNodeMutation.h; sourceTree = "<group>"; };
+		6B87649CEA878957F505C6AE /* NodeReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeReplacement.h; sourceTree = "<group>"; };
 		6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutationTests.m; sourceTree = "<group>"; };
+		6B87664F901EF4B9F6271F49 /* ReplaceNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutation.m; sourceTree = "<group>"; };
 		6B87664FF4767167A1010221 /* ConstantRNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantRNG.h; sourceTree = "<group>"; };
 		6B8767D2399CF7199E55779B /* ConstantRNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantRNG.m; sourceTree = "<group>"; };
+		6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutationTests.m; sourceTree = "<group>"; };
 		6B87680E869BB15D27780608 /* DeleteNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteNodeMutation.h; sourceTree = "<group>"; };
 		6B87681319DA1072F4F59426 /* Mutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutation.h; sourceTree = "<group>"; };
 		6B876890652116D6EF2E8FF4 /* RandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGenerator.h; sourceTree = "<group>"; };
@@ -126,7 +136,8 @@
 				46932EF41C8E175400B4903F /* Mutation.h */,
 				46932EF61C8E175400B4903F /* Info.plist */,
 				6B876B5880FE64F0776CDDBA /* Mutations */,
-				6B876B32959A1203A1E30B85 /* RNG */,
+				6B876B32959A1203A1E30B85 /* RNGs */,
+				6B876CFE3D5EF9DAC60989BB /* Replacements */,
 			);
 			path = Mutation;
 			sourceTree = "<group>";
@@ -136,7 +147,7 @@
 			children = (
 				46932F021C8E177200B4903F /* Info.plist */,
 				6B8769D0E633E66D29E666E4 /* Mutations */,
-				6B876A5BB52836B845CA99BE /* RNG */,
+				6B876A5BB52836B845CA99BE /* RNGs */,
 			);
 			path = MutationTests;
 			sourceTree = "<group>";
@@ -145,20 +156,21 @@
 			isa = PBXGroup;
 			children = (
 				6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */,
+				6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */,
 			);
 			path = Mutations;
 			sourceTree = "<group>";
 		};
-		6B876A5BB52836B845CA99BE /* RNG */ = {
+		6B876A5BB52836B845CA99BE /* RNGs */ = {
 			isa = PBXGroup;
 			children = (
 				6B876E83DD13509924A8B0DA /* RangeRNGTest.m */,
 				6B8768DC66A6AFD60BF2426D /* ConstantRNGTest.m */,
 			);
-			path = RNG;
+			path = RNGs;
 			sourceTree = "<group>";
 		};
-		6B876B32959A1203A1E30B85 /* RNG */ = {
+		6B876B32959A1203A1E30B85 /* RNGs */ = {
 			isa = PBXGroup;
 			children = (
 				6B876890652116D6EF2E8FF4 /* RandomNumberGenerator.h */,
@@ -167,7 +179,7 @@
 				6B8767D2399CF7199E55779B /* ConstantRNG.m */,
 				6B87664FF4767167A1010221 /* ConstantRNG.h */,
 			);
-			path = RNG;
+			path = RNGs;
 			sourceTree = "<group>";
 		};
 		6B876B5880FE64F0776CDDBA /* Mutations */ = {
@@ -176,8 +188,19 @@
 				6B87681319DA1072F4F59426 /* Mutation.h */,
 				6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */,
 				6B87680E869BB15D27780608 /* DeleteNodeMutation.h */,
+				6B87664F901EF4B9F6271F49 /* ReplaceNodeMutation.m */,
+				6B876477B311AC55E096226B /* ReplaceNodeMutation.h */,
 			);
 			path = Mutations;
+			sourceTree = "<group>";
+		};
+		6B876CFE3D5EF9DAC60989BB /* Replacements */ = {
+			isa = PBXGroup;
+			children = (
+				6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */,
+				6B87649CEA878957F505C6AE /* NodeReplacement.h */,
+			);
+			path = Replacements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +216,8 @@
 				6B876744A53CFDB3C8B6253C /* RandomNumberGenerator.h in Headers */,
 				6B876CE63EBBC4FAE827FB1D /* RangeRNG.h in Headers */,
 				6B876A29F847CA1D8B53334F /* ConstantRNG.h in Headers */,
+				6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */,
+				6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +349,8 @@
 				6B876525137568207B62CF72 /* DeleteNodeMutation.m in Sources */,
 				6B8761A2E11C21210E14EA70 /* RangeRNG.m in Sources */,
 				6B8764D50673BBA4C41E0F61 /* ConstantRNG.m in Sources */,
+				6B87642E0D5E91906D83315F /* ReplaceNodeMutation.m in Sources */,
+				6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +361,7 @@
 				6B8769C9C3D8B514737E8C91 /* RangeRNGTest.m in Sources */,
 				6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */,
 				6B8761E3D650AE2265882CD4 /* ConstantRNGTest.m in Sources */,
+				6B876379FF5E338C0F60A10E /* ReplaceNodeMutationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
