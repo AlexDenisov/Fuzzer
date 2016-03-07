@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		46932EE71C8E146600B4903F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932EE61C8E146600B4903F /* main.m */; };
+		46932EF51C8E175400B4903F /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 46932EF41C8E175400B4903F /* Mutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46932F011C8E177200B4903F /* MutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932F001C8E177200B4903F /* MutationTests.m */; };
+		46932F031C8E177200B4903F /* Mutation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46932EF21C8E175400B4903F /* Mutation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46932F041C8E177200B4903F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46932EDB1C8E146600B4903F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46932EF11C8E175400B4903F;
+			remoteInfo = Mutation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		46932EE11C8E146600B4903F /* CopyFiles */ = {
@@ -25,6 +38,12 @@
 /* Begin PBXFileReference section */
 		46932EE31C8E146600B4903F /* JSONFuzzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JSONFuzzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932EE61C8E146600B4903F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46932EF21C8E175400B4903F /* Mutation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mutation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46932EF41C8E175400B4903F /* Mutation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mutation.h; sourceTree = "<group>"; };
+		46932EF61C8E175400B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46932EFE1C8E177200B4903F /* MutationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46932F001C8E177200B4903F /* MutationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutationTests.m; sourceTree = "<group>"; };
+		46932F021C8E177200B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +54,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46932EEE1C8E175400B4903F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46932EFB1C8E177200B4903F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46932F031C8E177200B4903F /* Mutation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				46932EE51C8E146600B4903F /* JSONFuzzer */,
+				46932EF31C8E175400B4903F /* Mutation */,
+				46932EFF1C8E177200B4903F /* MutationTests */,
 				46932EE41C8E146600B4903F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				46932EE31C8E146600B4903F /* JSONFuzzer */,
+				46932EF21C8E175400B4903F /* Mutation.framework */,
+				46932EFE1C8E177200B4903F /* MutationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,7 +100,36 @@
 			path = JSONFuzzer;
 			sourceTree = "<group>";
 		};
+		46932EF31C8E175400B4903F /* Mutation */ = {
+			isa = PBXGroup;
+			children = (
+				46932EF41C8E175400B4903F /* Mutation.h */,
+				46932EF61C8E175400B4903F /* Info.plist */,
+			);
+			path = Mutation;
+			sourceTree = "<group>";
+		};
+		46932EFF1C8E177200B4903F /* MutationTests */ = {
+			isa = PBXGroup;
+			children = (
+				46932F001C8E177200B4903F /* MutationTests.m */,
+				46932F021C8E177200B4903F /* Info.plist */,
+			);
+			path = MutationTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		46932EEF1C8E175400B4903F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46932EF51C8E175400B4903F /* Mutation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		46932EE21C8E146600B4903F /* JSONFuzzer */ = {
@@ -82,6 +149,42 @@
 			productReference = 46932EE31C8E146600B4903F /* JSONFuzzer */;
 			productType = "com.apple.product-type.tool";
 		};
+		46932EF11C8E175400B4903F /* Mutation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46932EF71C8E175400B4903F /* Build configuration list for PBXNativeTarget "Mutation" */;
+			buildPhases = (
+				46932EED1C8E175400B4903F /* Sources */,
+				46932EEE1C8E175400B4903F /* Frameworks */,
+				46932EEF1C8E175400B4903F /* Headers */,
+				46932EF01C8E175400B4903F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mutation;
+			productName = Mutation;
+			productReference = 46932EF21C8E175400B4903F /* Mutation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		46932EFD1C8E177200B4903F /* MutationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46932F061C8E177200B4903F /* Build configuration list for PBXNativeTarget "MutationTests" */;
+			buildPhases = (
+				46932EFA1C8E177200B4903F /* Sources */,
+				46932EFB1C8E177200B4903F /* Frameworks */,
+				46932EFC1C8E177200B4903F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46932F051C8E177200B4903F /* PBXTargetDependency */,
+			);
+			name = MutationTests;
+			productName = MutationTests;
+			productReference = 46932EFE1C8E177200B4903F /* MutationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +195,12 @@
 				ORGANIZATIONNAME = lowlevelbits;
 				TargetAttributes = {
 					46932EE21C8E146600B4903F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					46932EF11C8E175400B4903F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					46932EFD1C8E177200B4903F = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -109,9 +218,28 @@
 			projectRoot = "";
 			targets = (
 				46932EE21C8E146600B4903F /* JSONFuzzer */,
+				46932EF11C8E175400B4903F /* Mutation */,
+				46932EFD1C8E177200B4903F /* MutationTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46932EF01C8E175400B4903F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46932EFC1C8E177200B4903F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46932EDF1C8E146600B4903F /* Sources */ = {
@@ -122,7 +250,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46932EED1C8E175400B4903F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46932EFA1C8E177200B4903F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46932F011C8E177200B4903F /* MutationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46932F051C8E177200B4903F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46932EF11C8E175400B4903F /* Mutation */;
+			targetProxy = 46932F041C8E177200B4903F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46932EE81C8E146600B4903F /* Debug */ = {
@@ -218,6 +369,70 @@
 			};
 			name = Release;
 		};
+		46932EF81C8E175400B4903F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Mutation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.Mutation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46932EF91C8E175400B4903F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Mutation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.Mutation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46932F071C8E177200B4903F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MutationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.MutationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46932F081C8E177200B4903F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MutationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.MutationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -235,6 +450,22 @@
 			buildConfigurations = (
 				46932EEB1C8E146600B4903F /* Debug */,
 				46932EEC1C8E146600B4903F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46932EF71C8E175400B4903F /* Build configuration list for PBXNativeTarget "Mutation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46932EF81C8E175400B4903F /* Debug */,
+				46932EF91C8E175400B4903F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46932F061C8E177200B4903F /* Build configuration list for PBXNativeTarget "MutationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46932F071C8E177200B4903F /* Debug */,
+				46932F081C8E177200B4903F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
