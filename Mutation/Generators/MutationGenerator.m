@@ -6,6 +6,7 @@
 #import "MutationGenerator.h"
 #import "DeleteNodeMutation.h"
 #import "ReplaceNodeMutation.h"
+#import "NodeReplacement.h"
 
 @interface MutationGenerator ()
 
@@ -14,6 +15,13 @@
 @end
 
 @implementation MutationGenerator
+
++ (instancetype)allMutations {
+    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator deleteNodeMutations];
+    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator replaceNodeMutationsWithReplacements:[NodeReplacement allReplacements]];
+
+    return [self combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
+}
 
 + (instancetype)deleteNodeMutations {
     MutationGenerator *mutationGenerator = [MutationGenerator new];

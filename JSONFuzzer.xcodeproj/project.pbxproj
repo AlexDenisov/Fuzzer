@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		46932EE71C8E146600B4903F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932EE61C8E146600B4903F /* main.m */; };
-		46932EF51C8E175400B4903F /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 46932EF41C8E175400B4903F /* Mutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46932F031C8E177200B4903F /* Mutation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46932EF21C8E175400B4903F /* Mutation.framework */; };
 		6B87608DD3921643F59EB9B9 /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87681319DA1072F4F59426 /* Mutation.h */; };
 		6B87618A5EC7FD2E011CC654 /* MutationGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876061A2D857330D6977AD /* MutationGenerator.h */; };
@@ -19,11 +18,14 @@
 		6B8764D50673BBA4C41E0F61 /* ConstantRNG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8767D2399CF7199E55779B /* ConstantRNG.m */; };
 		6B876525137568207B62CF72 /* DeleteNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */; };
 		6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876477B311AC55E096226B /* ReplaceNodeMutation.h */; };
+		6B8766C931EE186E2291C546 /* Mutator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8767C771606951AA579448 /* Mutator.h */; };
 		6B876744A53CFDB3C8B6253C /* RandomNumberGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876890652116D6EF2E8FF4 /* RandomNumberGenerator.h */; };
 		6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */; };
 		6B8768A226C9A2A7D3345D1B /* DeleteNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87680E869BB15D27780608 /* DeleteNodeMutation.h */; };
 		6B8769C9C3D8B514737E8C91 /* RangeRNGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876E83DD13509924A8B0DA /* RangeRNGTest.m */; };
+		6B876A25068ABE30C09A2DE5 /* GeneralMutatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A65DFF7305329169FC2 /* GeneralMutatorTests.m */; };
 		6B876A29F847CA1D8B53334F /* ConstantRNG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87664FF4767167A1010221 /* ConstantRNG.h */; };
+		6B876A4618661DA64343C8FC /* Mutator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87686E9C874555016B598A /* Mutator.m */; };
 		6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
 		6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* NodeReplacement.h */; };
 		6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87637C515B1B7C9973123C /* MutationGenerator.m */; };
@@ -57,7 +59,6 @@
 		46932EE31C8E146600B4903F /* JSONFuzzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JSONFuzzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932EE61C8E146600B4903F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46932EF21C8E175400B4903F /* Mutation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mutation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46932EF41C8E175400B4903F /* Mutation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mutation.h; sourceTree = "<group>"; };
 		46932EF61C8E175400B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46932EFE1C8E177200B4903F /* MutationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932F021C8E177200B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,13 +73,16 @@
 		6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutationTests.m; sourceTree = "<group>"; };
 		6B87664F901EF4B9F6271F49 /* ReplaceNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutation.m; sourceTree = "<group>"; };
 		6B87664FF4767167A1010221 /* ConstantRNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantRNG.h; sourceTree = "<group>"; };
+		6B8767C771606951AA579448 /* Mutator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutator.h; sourceTree = "<group>"; };
 		6B8767D2399CF7199E55779B /* ConstantRNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantRNG.m; sourceTree = "<group>"; };
 		6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutationTests.m; sourceTree = "<group>"; };
 		6B87680E869BB15D27780608 /* DeleteNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteNodeMutation.h; sourceTree = "<group>"; };
 		6B87681319DA1072F4F59426 /* Mutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutation.h; sourceTree = "<group>"; };
+		6B87686E9C874555016B598A /* Mutator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mutator.m; sourceTree = "<group>"; };
 		6B876890652116D6EF2E8FF4 /* RandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGenerator.h; sourceTree = "<group>"; };
 		6B8768DC66A6AFD60BF2426D /* ConstantRNGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantRNGTest.m; sourceTree = "<group>"; };
 		6B87695860E8517D419625FC /* RangeRNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeRNG.m; sourceTree = "<group>"; };
+		6B876A65DFF7305329169FC2 /* GeneralMutatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralMutatorTests.m; sourceTree = "<group>"; };
 		6B876E83DD13509924A8B0DA /* RangeRNGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeRNGTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,12 +143,12 @@
 		46932EF31C8E175400B4903F /* Mutation */ = {
 			isa = PBXGroup;
 			children = (
-				46932EF41C8E175400B4903F /* Mutation.h */,
 				46932EF61C8E175400B4903F /* Info.plist */,
 				6B876B5880FE64F0776CDDBA /* Mutations */,
 				6B876B32959A1203A1E30B85 /* RNGs */,
 				6B876CFE3D5EF9DAC60989BB /* Replacements */,
 				6B876581A00034218C699C93 /* Generators */,
+				6B876090830228564B71C4D7 /* Mutators */,
 			);
 			path = Mutation;
 			sourceTree = "<group>";
@@ -156,8 +160,18 @@
 				6B8769D0E633E66D29E666E4 /* Mutations */,
 				6B876A5BB52836B845CA99BE /* RNGs */,
 				6B876FA82E188EA7A0B8B90F /* Generators */,
+				6B8765C6E189A44AE02CB06F /* Mutators */,
 			);
 			path = MutationTests;
+			sourceTree = "<group>";
+		};
+		6B876090830228564B71C4D7 /* Mutators */ = {
+			isa = PBXGroup;
+			children = (
+				6B87686E9C874555016B598A /* Mutator.m */,
+				6B8767C771606951AA579448 /* Mutator.h */,
+			);
+			path = Mutators;
 			sourceTree = "<group>";
 		};
 		6B876581A00034218C699C93 /* Generators */ = {
@@ -167,6 +181,14 @@
 				6B876061A2D857330D6977AD /* MutationGenerator.h */,
 			);
 			path = Generators;
+			sourceTree = "<group>";
+		};
+		6B8765C6E189A44AE02CB06F /* Mutators */ = {
+			isa = PBXGroup;
+			children = (
+				6B876A65DFF7305329169FC2 /* GeneralMutatorTests.m */,
+			);
+			path = Mutators;
 			sourceTree = "<group>";
 		};
 		6B8769D0E633E66D29E666E4 /* Mutations */ = {
@@ -235,7 +257,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46932EF51C8E175400B4903F /* Mutation.h in Headers */,
 				6B87608DD3921643F59EB9B9 /* Mutation.h in Headers */,
 				6B8768A226C9A2A7D3345D1B /* DeleteNodeMutation.h in Headers */,
 				6B876744A53CFDB3C8B6253C /* RandomNumberGenerator.h in Headers */,
@@ -244,6 +265,7 @@
 				6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */,
 				6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */,
 				6B87618A5EC7FD2E011CC654 /* MutationGenerator.h in Headers */,
+				6B8766C931EE186E2291C546 /* Mutator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +400,7 @@
 				6B87642E0D5E91906D83315F /* ReplaceNodeMutation.m in Sources */,
 				6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */,
 				6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */,
+				6B876A4618661DA64343C8FC /* Mutator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +413,7 @@
 				6B8761E3D650AE2265882CD4 /* ConstantRNGTest.m in Sources */,
 				6B876379FF5E338C0F60A10E /* ReplaceNodeMutationTests.m in Sources */,
 				6B876C871EE43557E4ED4A8F /* MutationGeneratorTests.m in Sources */,
+				6B876A25068ABE30C09A2DE5 /* GeneralMutatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +604,7 @@
 				46932EEC1C8E146600B4903F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46932EF71C8E175400B4903F /* Build configuration list for PBXNativeTarget "Mutation" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +613,7 @@
 				46932EF91C8E175400B4903F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46932F061C8E177200B4903F /* Build configuration list for PBXNativeTarget "MutationTests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +622,7 @@
 				46932F081C8E177200B4903F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
