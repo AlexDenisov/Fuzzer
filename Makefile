@@ -1,7 +1,7 @@
 
 test:
-	xcodebuild -project JSONFuzzer.xcodeproj \
+	xcodebuild -project Fuzzer.xcodeproj \
              -IDEBuildOperationMaxNumberOfConcurrentCompileTasks=`sysctl -n hw.ncpu` \
-             -scheme MutationTests \
+             -scheme FuzzerTests \
              test
 

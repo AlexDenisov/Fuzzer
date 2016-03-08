@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:JSONFuzzer.xcodeproj">
+      location = "self:/Users/alexdenisov/Projects/FOSS/JSONFuzzer/Fuzzer.xcodeproj">
    </FileRef>
 </Workspace>
