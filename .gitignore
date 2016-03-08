@@ -1,2 +1,4 @@
-JSONFuzzer.xcodeproj/xcuserdata
-JSONFuzzer.xcodeproj/project.xcworkspace/xcuserdata
+Fuzzer.xcodeproj/xcuserdata
+Fuzzer.xcodeproj/project.xcworkspace/xcuserdata
+Build-OSX/
+Build-Simulator/
