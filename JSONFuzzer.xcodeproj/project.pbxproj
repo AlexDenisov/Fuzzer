@@ -11,6 +11,7 @@
 		46932EF51C8E175400B4903F /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 46932EF41C8E175400B4903F /* Mutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46932F031C8E177200B4903F /* Mutation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46932EF21C8E175400B4903F /* Mutation.framework */; };
 		6B87608DD3921643F59EB9B9 /* Mutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87681319DA1072F4F59426 /* Mutation.h */; };
+		6B87618A5EC7FD2E011CC654 /* MutationGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876061A2D857330D6977AD /* MutationGenerator.h */; };
 		6B8761A2E11C21210E14EA70 /* RangeRNG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87695860E8517D419625FC /* RangeRNG.m */; };
 		6B8761E3D650AE2265882CD4 /* ConstantRNGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8768DC66A6AFD60BF2426D /* ConstantRNGTest.m */; };
 		6B876379FF5E338C0F60A10E /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
@@ -25,6 +26,8 @@
 		6B876A29F847CA1D8B53334F /* ConstantRNG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87664FF4767167A1010221 /* ConstantRNG.h */; };
 		6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
 		6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* NodeReplacement.h */; };
+		6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87637C515B1B7C9973123C /* MutationGenerator.m */; };
+		6B876C871EE43557E4ED4A8F /* MutationGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8762983FAC96D378F79F3F /* MutationGeneratorTests.m */; };
 		6B876CE63EBBC4FAE827FB1D /* RangeRNG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8760D547029B37B6AD0E37 /* RangeRNG.h */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +61,11 @@
 		46932EF61C8E175400B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46932EFE1C8E177200B4903F /* MutationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932F021C8E177200B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B876061A2D857330D6977AD /* MutationGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutationGenerator.h; sourceTree = "<group>"; };
 		6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeReplacement.m; sourceTree = "<group>"; };
 		6B8760D547029B37B6AD0E37 /* RangeRNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeRNG.h; sourceTree = "<group>"; };
+		6B8762983FAC96D378F79F3F /* MutationGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutationGeneratorTests.m; sourceTree = "<group>"; };
+		6B87637C515B1B7C9973123C /* MutationGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutationGenerator.m; sourceTree = "<group>"; };
 		6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutation.m; sourceTree = "<group>"; };
 		6B876477B311AC55E096226B /* ReplaceNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceNodeMutation.h; sourceTree = "<group>"; };
 		6B87649CEA878957F505C6AE /* NodeReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeReplacement.h; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 				6B876B5880FE64F0776CDDBA /* Mutations */,
 				6B876B32959A1203A1E30B85 /* RNGs */,
 				6B876CFE3D5EF9DAC60989BB /* Replacements */,
+				6B876581A00034218C699C93 /* Generators */,
 			);
 			path = Mutation;
 			sourceTree = "<group>";
@@ -148,8 +155,18 @@
 				46932F021C8E177200B4903F /* Info.plist */,
 				6B8769D0E633E66D29E666E4 /* Mutations */,
 				6B876A5BB52836B845CA99BE /* RNGs */,
+				6B876FA82E188EA7A0B8B90F /* Generators */,
 			);
 			path = MutationTests;
+			sourceTree = "<group>";
+		};
+		6B876581A00034218C699C93 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				6B87637C515B1B7C9973123C /* MutationGenerator.m */,
+				6B876061A2D857330D6977AD /* MutationGenerator.h */,
+			);
+			path = Generators;
 			sourceTree = "<group>";
 		};
 		6B8769D0E633E66D29E666E4 /* Mutations */ = {
@@ -203,6 +220,14 @@
 			path = Replacements;
 			sourceTree = "<group>";
 		};
+		6B876FA82E188EA7A0B8B90F /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				6B8762983FAC96D378F79F3F /* MutationGeneratorTests.m */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -218,6 +243,7 @@
 				6B876A29F847CA1D8B53334F /* ConstantRNG.h in Headers */,
 				6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */,
 				6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */,
+				6B87618A5EC7FD2E011CC654 /* MutationGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +377,7 @@
 				6B8764D50673BBA4C41E0F61 /* ConstantRNG.m in Sources */,
 				6B87642E0D5E91906D83315F /* ReplaceNodeMutation.m in Sources */,
 				6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */,
+				6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +389,7 @@
 				6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */,
 				6B8761E3D650AE2265882CD4 /* ConstantRNGTest.m in Sources */,
 				6B876379FF5E338C0F60A10E /* ReplaceNodeMutationTests.m in Sources */,
+				6B876C871EE43557E4ED4A8F /* MutationGeneratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

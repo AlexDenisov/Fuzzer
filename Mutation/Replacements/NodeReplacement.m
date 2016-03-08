@@ -13,6 +13,19 @@
 
 @implementation NodeReplacement
 
++ (NSArray <NodeReplacement *> *)allReplacements {
+    return @[
+            [self integerReplacement],
+            [self floatReplacement],
+            [self stringReplacement],
+            [self booleanReplacement],
+            [self arrayReplacement],
+            [self dictionaryReplacement],
+            [self nullReplacement],
+            [self nilReplacement]
+    ];
+}
+
 + (instancetype)integerReplacement {
     NodeReplacement *replacement = [NodeReplacement new];
 

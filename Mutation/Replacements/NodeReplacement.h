@@ -7,6 +7,8 @@
 
 @interface NodeReplacement : NSObject
 
++ (NSArray <NodeReplacement *> *)allReplacements;
+
 + (instancetype)integerReplacement;
 + (instancetype)floatReplacement;
 + (instancetype)stringReplacement;
