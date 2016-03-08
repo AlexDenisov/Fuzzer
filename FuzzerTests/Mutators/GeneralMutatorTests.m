@@ -10,6 +10,8 @@
 #import "MutationGenerator.h"
 #import "Mutator.h"
 #import "NodeReplacement.h"
+#import "DeleteNodeMutation.h"
+#import "ReplaceNodeMutation.h"
 
 @interface GeneralMutatorTests : XCTestCase
 
@@ -39,8 +41,8 @@
             @"last name" : @"Doe"
     };
 
-    MutationGenerator *mutationGenerator = [MutationGenerator deleteNodeMutations];
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:mutationGenerator];
+    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
 
     NSMutableArray *mutants = [NSMutableArray new];
 
@@ -62,8 +64,8 @@
             @"age" : @42
     };
 
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator deleteNodeMutations];
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:deleteNodeMutationGenerator];
+    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:deleteNodeMutationGenerator];
     XCTAssertEqual(mutator.amountOfMutants, 3);
 }
 
@@ -74,14 +76,18 @@
             @"age" : @42
     };
 
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator deleteNodeMutations];
+    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
 
-    NSArray *replacements = @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ];
-    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator replaceNodeMutationsWithReplacements:replacements];
+    NSMutableArray *replacements = [NSMutableArray new];
+    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
+        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    }
+
+    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
 
     MutationGenerator *mutationGenerator = [MutationGenerator combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
 
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:mutationGenerator];
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
     XCTAssertEqual(mutator.amountOfMutants, 12);
 }
 
@@ -92,8 +98,8 @@
             @"age" : @42
     };
 
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:[MutationGenerator allMutations]];
-    XCTAssertEqual(mutator.amountOfMutants, 27, @"(All ReplaceNode mutations + DeleteNode mutations) * original.count");
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:[MutationGenerator builtinMutationGenerator]];
+    XCTAssertEqual(mutator.amountOfMutants, 27, @"(All ReplaceNode mutations + DeleteNode mutations) * sample.count");
 }
 
 @end

@@ -11,7 +11,7 @@ typedef void (^MutantEnumeratorBlock)(NSDictionary *mutant);
 
 @interface Mutator : NSObject
 
-+ (instancetype)mutatorForOriginal:(NSDictionary *)original withMutationGenerator:(MutationGenerator *)mutationGenerator;
++ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(MutationGenerator *)mutationGenerator;
 
 - (void)enumerateMutantsUsingBLock:(MutantEnumeratorBlock)mutantEnumeratorBlock;
 

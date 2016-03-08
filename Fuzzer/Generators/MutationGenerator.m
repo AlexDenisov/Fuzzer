@@ -16,23 +16,8 @@
 
 @implementation MutationGenerator
 
-+ (instancetype)allMutations {
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator deleteNodeMutations];
-    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator replaceNodeMutationsWithReplacements:[NodeReplacement allReplacements]];
-
-    return [self combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
-}
-
-+ (instancetype)deleteNodeMutations {
-    MutationGenerator *mutationGenerator = [MutationGenerator new];
-
-    mutationGenerator.mutations = @[ [DeleteNodeMutation new] ];
-
-    return mutationGenerator;
-}
-
-+ (instancetype)replaceNodeMutationsWithReplacements:(NSArray <NodeReplacement *> *)replacements {
-    MutationGenerator *mutationGenerator = [MutationGenerator new];
++ (instancetype)builtinMutationGenerator {
+    NSArray *replacements = [NodeReplacement builtinReplacements];
 
     NSMutableArray *mutations = [NSMutableArray arrayWithCapacity:replacements.count];
     for (NodeReplacement *replacement in replacements) {
@@ -40,7 +25,15 @@
         [mutations addObject:mutation];
     }
 
-    mutationGenerator.mutations = [mutations copy];
+    [mutations addObject:[DeleteNodeMutation new]];
+
+    return [self mutationGeneratorWithMutations:mutations];
+}
+
++ (instancetype)mutationGeneratorWithMutations:(NSArray *)mutations {
+    MutationGenerator *mutationGenerator = [MutationGenerator new];
+
+    mutationGenerator.mutations = mutations;
 
     return mutationGenerator;
 }
@@ -58,6 +51,5 @@
 
     return mutationGenerator;
 }
-
 
 @end

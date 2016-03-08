@@ -17,14 +17,14 @@
 		6B876525137568207B62CF72 /* DeleteNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */; };
 		6B87652D9BCE053DCED546A4 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D71E7777910F7AF2D6A /* Report.m */; };
 		6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876477B311AC55E096226B /* ReplaceNodeMutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B8766C931EE186E2291C546 /* Mutator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8767C771606951AA579448 /* Mutator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B87672510C8B58EA2FDC383 /* Mutator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87654D889EEFE5E90F346D /* Mutator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87609BA27EC2754EFE4B72 /* NodeReplacement.m */; };
 		6B8767AB591ED57B7794B1B4 /* EngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* EngineTests.m */; };
 		6B8768A226C9A2A7D3345D1B /* DeleteNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87680E869BB15D27780608 /* DeleteNodeMutation.h */; };
 		6B876A25068ABE30C09A2DE5 /* GeneralMutatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A65DFF7305329169FC2 /* GeneralMutatorTests.m */; };
-		6B876A4618661DA64343C8FC /* Mutator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87686E9C874555016B598A /* Mutator.m */; };
 		6B876A4A453725548741013D /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
 		6B876AB73456F2BD5F2CFF2E /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876AB0D5D58974757B1AC4 /* Engine.m */; };
+		6B876B4C3C373728BC694E9B /* Mutator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D9F33F82EC0436329F1 /* Mutator.m */; };
 		6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* NodeReplacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87637C515B1B7C9973123C /* MutationGenerator.m */; };
 		6B876C871EE43557E4ED4A8F /* MutationGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8762983FAC96D378F79F3F /* MutationGeneratorTests.m */; };
@@ -55,16 +55,16 @@
 		6B87641E21B59E6FD23EF217 /* DeleteNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutation.m; sourceTree = "<group>"; };
 		6B876477B311AC55E096226B /* ReplaceNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceNodeMutation.h; sourceTree = "<group>"; };
 		6B87649CEA878957F505C6AE /* NodeReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeReplacement.h; sourceTree = "<group>"; };
+		6B87654D889EEFE5E90F346D /* Mutator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutator.h; sourceTree = "<group>"; };
 		6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteNodeMutationTests.m; sourceTree = "<group>"; };
 		6B87664F901EF4B9F6271F49 /* ReplaceNodeMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutation.m; sourceTree = "<group>"; };
-		6B8767C771606951AA579448 /* Mutator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutator.h; sourceTree = "<group>"; };
 		6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceNodeMutationTests.m; sourceTree = "<group>"; };
 		6B87680E869BB15D27780608 /* DeleteNodeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteNodeMutation.h; sourceTree = "<group>"; };
 		6B87681319DA1072F4F59426 /* Mutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutation.h; sourceTree = "<group>"; };
-		6B87686E9C874555016B598A /* Mutator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mutator.m; sourceTree = "<group>"; };
 		6B876A65DFF7305329169FC2 /* GeneralMutatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralMutatorTests.m; sourceTree = "<group>"; };
 		6B876AB0D5D58974757B1AC4 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
 		6B876D71E7777910F7AF2D6A /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		6B876D9F33F82EC0436329F1 /* Mutator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mutator.m; sourceTree = "<group>"; };
 		6B876E256795932B8DAF963A /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
 		6B876EBA5CFF28D9A8CA710B /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 				6B876B5880FE64F0776CDDBA /* Mutations */,
 				6B876CFE3D5EF9DAC60989BB /* Replacements */,
 				6B876581A00034218C699C93 /* Generators */,
-				6B876090830228564B71C4D7 /* Mutators */,
 				6B876BA8F70122898C7114B9 /* Engine */,
+				6B876F126BB5EB436ACB5CE5 /* Mutator */,
 			);
 			path = Fuzzer;
 			sourceTree = "<group>";
@@ -130,15 +130,6 @@
 				6B876D23512817D9CA836467 /* Engine */,
 			);
 			path = FuzzerTests;
-			sourceTree = "<group>";
-		};
-		6B876090830228564B71C4D7 /* Mutators */ = {
-			isa = PBXGroup;
-			children = (
-				6B8767C771606951AA579448 /* Mutator.h */,
-				6B87686E9C874555016B598A /* Mutator.m */,
-			);
-			path = Mutators;
 			sourceTree = "<group>";
 		};
 		6B876581A00034218C699C93 /* Generators */ = {
@@ -207,6 +198,15 @@
 			path = Engine;
 			sourceTree = "<group>";
 		};
+		6B876F126BB5EB436ACB5CE5 /* Mutator */ = {
+			isa = PBXGroup;
+			children = (
+				6B876D9F33F82EC0436329F1 /* Mutator.m */,
+				6B87654D889EEFE5E90F346D /* Mutator.h */,
+			);
+			path = Mutator;
+			sourceTree = "<group>";
+		};
 		6B876FA82E188EA7A0B8B90F /* Generators */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,10 +227,10 @@
 				6B8765EBD63E2D51DE633138 /* ReplaceNodeMutation.h in Headers */,
 				6B876B8761CF35AD9F96200E /* NodeReplacement.h in Headers */,
 				6B87618A5EC7FD2E011CC654 /* MutationGenerator.h in Headers */,
-				6B8766C931EE186E2291C546 /* Mutator.h in Headers */,
 				6B8762DBB369EFDE3E3A2566 /* Engine.h in Headers */,
 				6B876D1017D5A4800AB4E745 /* Report.h in Headers */,
 				6B8768A226C9A2A7D3345D1B /* DeleteNodeMutation.h in Headers */,
+				6B87672510C8B58EA2FDC383 /* Mutator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +334,9 @@
 				6B87642E0D5E91906D83315F /* ReplaceNodeMutation.m in Sources */,
 				6B876758A59EF3364E168825 /* NodeReplacement.m in Sources */,
 				6B876B9DECE75F130742CD61 /* MutationGenerator.m in Sources */,
-				6B876A4618661DA64343C8FC /* Mutator.m in Sources */,
 				6B876AB73456F2BD5F2CFF2E /* Engine.m in Sources */,
 				6B87652D9BCE053DCED546A4 /* Report.m in Sources */,
+				6B876B4C3C373728BC694E9B /* Mutator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.2.0;
 				DEFINES_MODULE = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Fuzzer/Info.plist;
@@ -464,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.2.0;
 				DEFINES_MODULE = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Fuzzer/Info.plist;

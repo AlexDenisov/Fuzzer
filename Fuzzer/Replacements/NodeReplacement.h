@@ -9,7 +9,7 @@
 
 + (instancetype)replacementWithValue:(id)value;
 
-+ (NSArray <NodeReplacement *> *)allReplacements;
++ (NSArray <NodeReplacement *> *)builtinReplacements;
 
 + (instancetype)integerReplacement;
 + (instancetype)floatReplacement;

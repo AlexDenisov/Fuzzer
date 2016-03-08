@@ -10,10 +10,9 @@
 
 @interface MutationGenerator : NSObject
 
-+ (instancetype)allMutations;
++ (instancetype)builtinMutationGenerator;
 
-+ (instancetype)deleteNodeMutations;
-+ (instancetype)replaceNodeMutationsWithReplacements:(NSArray <NodeReplacement *> *)replacements;
++ (instancetype)mutationGeneratorWithMutations:(NSArray <id <Mutation>>*)mutations;
 
 + (instancetype)combineMutationGenerators:(NSArray <MutationGenerator *> *)mutationGenerators;
 

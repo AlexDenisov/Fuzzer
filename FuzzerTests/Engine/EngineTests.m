@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Mutator.h"
 #import "MutationGenerator.h"
+#import "DeleteNodeMutation.h"
 #import "Engine.h"
 #import "Report.h"
 
@@ -24,7 +25,8 @@
             @"last name" : @"Doe"
     };
 
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:[MutationGenerator deleteNodeMutations]];
+    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
     Engine *engine = [Engine engineWithMutator:mutator];
 
     NSException *exception = [NSException exceptionWithName:@"Nothing" reason:@"No reason" userInfo:@{}];
@@ -48,7 +50,8 @@
             @"last name" : @"Doe"
     };
 
-    Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:[MutationGenerator deleteNodeMutations]];
+    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
+    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
     Engine *engine = [Engine engineWithMutator:mutator];
 
     NSArray *reports = [engine runEngineOverMutants:^(NSDictionary *mutant) {

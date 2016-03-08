@@ -13,7 +13,7 @@
 
 @implementation NodeReplacement
 
-+ (NSArray <NodeReplacement *> *)allReplacements {
++ (NSArray <NodeReplacement *> *)builtinReplacements {
     return @[
             [self integerReplacement],
             [self floatReplacement],

@@ -10,16 +10,16 @@
 @interface Mutator ()
 
 @property MutationGenerator *mutationGenerator;
-@property NSDictionary *original;
+@property NSDictionary *sample;
 
 @end
 
 @implementation Mutator
 
-+ (instancetype)mutatorForOriginal:(NSDictionary *)original withMutationGenerator:(MutationGenerator *)mutationGenerator {
++ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(MutationGenerator *)mutationGenerator {
     Mutator *mutator = [Mutator new];
 
-    mutator.original = [original copy];
+    mutator.sample = [sample copy];
     mutator.mutationGenerator = mutationGenerator;
 
     return mutator;
@@ -27,15 +27,15 @@
 
 - (void)enumerateMutantsUsingBLock:(MutantEnumeratorBlock)mutantEnumeratorBlock {
     for (id<Mutation> mutation in self.mutationGenerator.mutations) {
-        for (NSString *key in self.original.allKeys) {
-            NSDictionary *mutant = [mutation mutateSample:self.original atNode:key];
+        for (NSString *key in self.sample.allKeys) {
+            NSDictionary *mutant = [mutation mutateSample:self.sample atNode:key];
             mutantEnumeratorBlock(mutant);
         }
     }
 }
 
 - (NSUInteger)amountOfMutants {
-    return self.original.count * self.mutationGenerator.mutations.count;
+    return self.sample.count * self.mutationGenerator.mutations.count;
 }
 
 @end

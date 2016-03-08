@@ -26,15 +26,15 @@
 
     NSString *key0 = @"first name";
     NSDictionary *key0Less = [mutation mutateSample:original atNode:key0];
-    XCTAssertFalse([key0Less.allKeys containsObject:key0], @"Node '%@' deleted from original dictionary '%@'", key0, original);
+    XCTAssertFalse([key0Less.allKeys containsObject:key0], @"Node '%@' deleted from sample dictionary '%@'", key0, original);
 
     NSString *key1 = @"last name";
     NSDictionary *key1Less = [mutation mutateSample:original atNode:key1];
-    XCTAssertFalse([key1Less.allKeys containsObject:key1], @"Node '%@' deleted from original dictionary '%@'", key1, original);
+    XCTAssertFalse([key1Less.allKeys containsObject:key1], @"Node '%@' deleted from sample dictionary '%@'", key1, original);
 
     NSString *key2 = @"age";
     NSDictionary *key2Less = [mutation mutateSample:original atNode:key2];
-    XCTAssertFalse([key2Less.allKeys containsObject:key2], @"Node '%@' deleted from original dictionary '%@'", key2, original);
+    XCTAssertFalse([key2Less.allKeys containsObject:key2], @"Node '%@' deleted from sample dictionary '%@'", key2, original);
 }
 
 @end

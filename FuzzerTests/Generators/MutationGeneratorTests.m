@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "MutationGenerator.h"
 #import "NodeReplacement.h"
+#import "DeleteNodeMutation.h"
+#import "ReplaceNodeMutation.h"
 
 @interface MutationGeneratorTests : XCTestCase
 
@@ -17,24 +19,33 @@
 @implementation MutationGeneratorTests
 
 - (void)test_generates_delete_node_mutation {
-    MutationGenerator *mutationGenerator = [MutationGenerator deleteNodeMutations];
+    DeleteNodeMutation *mutation = [DeleteNodeMutation new];
+    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[mutation]];
     XCTAssertEqual([mutationGenerator mutations].count, 1);
 }
 
 - (void)test_generates_replace_node_mutations {
-    NSArray *replacements = @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ];
-    MutationGenerator *mutationGenerator = [MutationGenerator replaceNodeMutationsWithReplacements:replacements];
+    NSMutableArray *replacements = [NSMutableArray new];
+    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
+        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    }
+
+    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
     XCTAssertEqual([mutationGenerator mutations].count, 3);
 }
 
 - (void)test_combines_two_generators {
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator deleteNodeMutations];
+    DeleteNodeMutation *mutation = [DeleteNodeMutation new];
+    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[mutation]];
 
-    NSArray *replacements = @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ];
-    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator replaceNodeMutationsWithReplacements:replacements];
+    NSMutableArray *replacements = [NSMutableArray new];
+    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
+        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    }
+
+    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
 
     MutationGenerator *mutationGenerator = [MutationGenerator combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
-
     XCTAssertEqual([mutationGenerator mutations].count, 4);
 }
 

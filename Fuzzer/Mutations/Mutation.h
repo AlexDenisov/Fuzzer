@@ -5,8 +5,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol RandomNumberGenerator;
-
 @protocol Mutation <NSObject>
 
 - (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName;
