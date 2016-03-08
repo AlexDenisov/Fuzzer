@@ -8,4 +8,10 @@
 
 #pragma once
 
+#import <Fuzzer/Engine.h>
+#import <Fuzzer/MutationGenerator.h>
+#import <Fuzzer/Mutation.h>
 #import <Fuzzer/Mutator.h>
+#import <Fuzzer/NodeReplacement.h>
+#import <Fuzzer/RandomNumberGenerator.h>
+#import <Fuzzer/Report.h>
