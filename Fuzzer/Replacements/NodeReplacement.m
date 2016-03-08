@@ -26,71 +26,44 @@
     ];
 }
 
-+ (instancetype)integerReplacement {
++ (instancetype)replacementWithValue:(id)value {
     NodeReplacement *replacement = [NodeReplacement new];
 
-    replacement.value = @42;
+    replacement.value = value;
 
     return replacement;
+}
+
++ (instancetype)integerReplacement {
+    return [self replacementWithValue:@42];
 }
 
 + (instancetype)floatReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = @42.13;
-
-    return replacement;
+    return [self replacementWithValue:@42.13];
 }
 
 + (instancetype)stringReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = @"some random (actually no) string";
-
-    return replacement;
+    return [self replacementWithValue:@"some random (actually no) string"];
 }
 
 + (instancetype)booleanReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = @YES;
-
-    return replacement;
+    return [self replacementWithValue:@YES];
 }
 
 + (instancetype)arrayReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = @[ @"array", @"of",  @"strings" ];
-
-    return replacement;
+    return [self replacementWithValue:@[ @"array", @"of",  @"strings" ]];
 }
 
 + (instancetype)dictionaryReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = @{
-            @"key" : @42,
-            @"value" : @"value"
-    };
-
-    return replacement;
+    return [self replacementWithValue:@{ @"key" : @42, @"value" : @"value" }];
 }
 
 + (instancetype)nullReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = [NSNull null];
-
-    return replacement;
+    return [self replacementWithValue:[NSNull null]];
 }
 
 + (instancetype)nilReplacement {
-    NodeReplacement *replacement = [NodeReplacement new];
-
-    replacement.value = nil;
-
-    return replacement;
+    return [self replacementWithValue:nil];
 }
 
 @end

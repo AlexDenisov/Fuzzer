@@ -25,7 +25,7 @@
     };
 
     Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:[MutationGenerator deleteNodeMutations]];
-    Engine *engine = [[Engine alloc] initWithMutator:mutator];
+    Engine *engine = [Engine engineWithMutator:mutator];
 
     NSException *exception = [NSException exceptionWithName:@"Nothing" reason:@"No reason" userInfo:@{}];
 
@@ -33,8 +33,8 @@
         @throw exception;
     }];
 
-    Report *firstnameLessReport = [[Report alloc] initWithMutant:@{ @"last name" : @"Doe" } exception:exception];
-    Report *lastnameLessReport = [[Report alloc] initWithMutant:@{ @"first name" : @"John" } exception:exception];
+    Report *firstnameLessReport = [Report reportWithMutant:@{ @"last name" : @"Doe" } exception:exception];
+    Report *lastnameLessReport = [Report reportWithMutant:@{ @"first name" : @"John" } exception:exception];
 
     XCTAssertEqual(reports.count, 2);
 
@@ -49,7 +49,7 @@
     };
 
     Mutator *mutator = [Mutator mutatorForOriginal:original withMutationGenerator:[MutationGenerator deleteNodeMutations]];
-    Engine *engine = [[Engine alloc] initWithMutator:mutator];
+    Engine *engine = [Engine engineWithMutator:mutator];
 
     NSArray *reports = [engine runEngineOverMutants:^(NSDictionary *mutant) {
         // all good

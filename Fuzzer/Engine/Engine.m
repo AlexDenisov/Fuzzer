@@ -15,12 +15,12 @@
 
 @implementation Engine
 
-- (instancetype)initWithMutator:(Mutator *)mutator {
-    self = [super init];
++ (instancetype)engineWithMutator:(Mutator *)mutator {
+    Engine *engine = [Engine new];
 
-    self.mutator = mutator;
+    engine.mutator = mutator;
 
-    return self;
+    return engine;
 }
 
 - (NSArray <Report *> *)runEngineOverMutants:(EngineEnumeratorBlock)engineEnumeratorBlock {
@@ -31,7 +31,7 @@
             engineEnumeratorBlock(mutant);
         }
         @catch (NSException *exception) {
-            Report *report = [[Report alloc] initWithMutant:mutant exception:exception];
+            Report *report = [Report reportWithMutant:mutant exception:exception];
             [reports addObject:report];
         }
     }];

@@ -14,13 +14,13 @@
 
 @implementation Report
 
-- (instancetype)initWithMutant:(NSDictionary *)mutant exception:(NSException *)exception {
-    self = [super init];
++ (instancetype)reportWithMutant:(NSDictionary *)mutant exception:(NSException *)exception {
+    Report *report = [self new];
 
-    self.mutant = mutant;
-    self.exception = exception;
+    report.mutant = mutant;
+    report.exception = exception;
 
-    return self;
+    return report;
 }
 
 - (BOOL)isEqual:(Report *)report {

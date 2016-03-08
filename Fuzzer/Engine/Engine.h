@@ -12,7 +12,7 @@ typedef void (^EngineEnumeratorBlock)(NSDictionary *mutant);
 
 @interface Engine : NSObject
 
-- (instancetype)initWithMutator:(Mutator *)mutator;
++ (instancetype)engineWithMutator:(Mutator *)mutator;
 
 - (NSArray <Report *> *)runEngineOverMutants:(EngineEnumeratorBlock)engineEnumeratorBlock;
 

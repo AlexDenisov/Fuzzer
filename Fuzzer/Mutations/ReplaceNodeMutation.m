@@ -15,12 +15,12 @@
 
 @implementation ReplaceNodeMutation
 
-- (instancetype)initWithReplacement:(NodeReplacement *)replacement {
-    self = [super init];
++ (id<Mutation>)mutationWithReplacement:(NodeReplacement *)replacement {
+    ReplaceNodeMutation *mutation = [ReplaceNodeMutation new];
 
-    self.replacement = replacement;
+    mutation.replacement = replacement;
 
-    return self;
+    return mutation;
 }
 
 - (NSDictionary *)mutate:(NSDictionary *)original withRNG:(id <RandomNumberGenerator>)rng {

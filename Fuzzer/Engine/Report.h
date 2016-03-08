@@ -7,7 +7,7 @@
 
 @interface Report : NSObject
 
-- (instancetype)initWithMutant:(NSDictionary *)mutant exception:(NSException *)exception;
++ (instancetype)reportWithMutant:(NSDictionary *)mutant exception:(NSException *)exception;
 
 - (NSDictionary *)mutant;
 - (NSException *)exception;

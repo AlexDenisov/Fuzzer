@@ -7,6 +7,8 @@
 
 @interface NodeReplacement : NSObject
 
++ (instancetype)replacementWithValue:(id)value;
+
 + (NSArray <NodeReplacement *> *)allReplacements;
 
 + (instancetype)integerReplacement;

@@ -20,7 +20,7 @@
 - (void)test_replaces_specific_node_with_string {
     NodeReplacement *replacement = [NodeReplacement stringReplacement];
 
-    ReplaceNodeMutation *mutation = [[ReplaceNodeMutation alloc] initWithReplacement:replacement];
+    ReplaceNodeMutation *mutation = [ReplaceNodeMutation mutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",
@@ -49,7 +49,7 @@
 - (void)test_replaces_specific_node_with_integer {
     NodeReplacement *replacement = [NodeReplacement integerReplacement];
 
-    ReplaceNodeMutation *mutation = [[ReplaceNodeMutation alloc] initWithReplacement:replacement];
+    ReplaceNodeMutation *mutation = [ReplaceNodeMutation mutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",

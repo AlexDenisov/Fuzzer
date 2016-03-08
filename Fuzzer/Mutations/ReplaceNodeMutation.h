@@ -10,6 +10,6 @@
 @interface ReplaceNodeMutation : NSObject
     <Mutation>
 
-- (instancetype)initWithReplacement:(NodeReplacement *)replacement;
++ (id<Mutation>)mutationWithReplacement:(NodeReplacement *)replacement;
 
 @end

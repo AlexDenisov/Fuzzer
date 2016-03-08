@@ -36,7 +36,7 @@
 
     NSMutableArray *mutations = [NSMutableArray arrayWithCapacity:replacements.count];
     for (NodeReplacement *replacement in replacements) {
-        id<Mutation> mutation = [[ReplaceNodeMutation alloc] initWithReplacement:replacement];
+        id<Mutation> mutation = [ReplaceNodeMutation mutationWithReplacement:replacement];
         [mutations addObject:mutation];
     }
 
