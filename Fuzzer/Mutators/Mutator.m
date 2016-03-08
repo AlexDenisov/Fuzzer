@@ -4,14 +4,11 @@
 //
 
 #import "Mutator.h"
-#import "RandomNumberGenerator.h"
 #import "MutationGenerator.h"
-#import "RangeRNG.h"
 #import "Mutation.h"
 
 @interface Mutator ()
 
-@property id<RandomNumberGenerator> rng;
 @property MutationGenerator *mutationGenerator;
 @property NSDictionary *original;
 
@@ -24,15 +21,14 @@
 
     mutator.original = [original copy];
     mutator.mutationGenerator = mutationGenerator;
-    mutator.rng = [[RangeRNG alloc] initWithRange:NSMakeRange(0, mutator.original.count)];
 
     return mutator;
 }
 
 - (void)enumerateMutantsUsingBLock:(MutantEnumeratorBlock)mutantEnumeratorBlock {
     for (id<Mutation> mutation in self.mutationGenerator.mutations) {
-        for (int i = 0; i < self.original.count; i++) {
-            NSDictionary *mutant = [mutation mutate:self.original withRNG:self.rng];
+        for (NSString *key in self.original.allKeys) {
+            NSDictionary *mutant = [mutation mutateSample:self.original atNode:key];
             mutantEnumeratorBlock(mutant);
         }
     }

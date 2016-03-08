@@ -5,7 +5,6 @@
 
 #import "ReplaceNodeMutation.h"
 #import "NodeReplacement.h"
-#import "RandomNumberGenerator.h"
 
 @interface ReplaceNodeMutation ()
 
@@ -23,11 +22,10 @@
     return mutation;
 }
 
-- (NSDictionary *)mutate:(NSDictionary *)original withRNG:(id <RandomNumberGenerator>)rng {
-    NSMutableDictionary *mutatedCopy = [NSMutableDictionary dictionaryWithDictionary:original];
+- (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName {
+    NSMutableDictionary *mutatedCopy = [NSMutableDictionary dictionaryWithDictionary:sample];
 
-    NSString *keyForNodeToReplace = original.allKeys[rng.next];
-    mutatedCopy[keyForNodeToReplace] = self.replacement.value;
+    mutatedCopy[nodeName] = self.replacement.value;
 
     return mutatedCopy;
 }

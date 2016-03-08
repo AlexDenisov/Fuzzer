@@ -4,15 +4,13 @@
 //
 
 #import "DeleteNodeMutation.h"
-#import "RandomNumberGenerator.h"
 
 @implementation DeleteNodeMutation
 
-- (NSDictionary *)mutate:(NSDictionary *)original withRNG:(id <RandomNumberGenerator>)rng {
-    NSMutableDictionary *mutatedCopy = [NSMutableDictionary dictionaryWithDictionary:original];
+- (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName {
+    NSMutableDictionary *mutatedCopy = [NSMutableDictionary dictionaryWithDictionary:sample];
 
-    NSString *keyForNodeToRemove = original.allKeys[rng.next];
-    [mutatedCopy removeObjectForKey:keyForNodeToRemove];
+    [mutatedCopy removeObjectForKey:nodeName];
 
     return mutatedCopy;
 }

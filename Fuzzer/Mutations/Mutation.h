@@ -9,6 +9,6 @@
 
 @protocol Mutation <NSObject>
 
-- (NSDictionary *)mutate:(NSDictionary *)original withRNG:(id<RandomNumberGenerator>)rng;
+- (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName;
 
 @end
