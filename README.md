@@ -36,7 +36,13 @@ $ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Component
 $ components install
 ```
 
-#### CocoaPods/Carthage
+#### CocoaPods
+
+```ruby
+pod 'Fuzzer', '0.2.0'
+```
+
+#### Carthage
 
 Pull requests are more than welcome!
 

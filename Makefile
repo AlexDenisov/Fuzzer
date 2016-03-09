@@ -19,7 +19,10 @@ VERSION=$(shell xcodebuild -showBuildSettings 2> /dev/null | grep CURRENT_PROJEC
 
 ### Actions
 
-.PHONY: archive archive_osx archive_ios
+.PHONY: archive archive_osx archive_ios deploy_cocoapods
+
+deploy_cocoapods:
+	pod trunk push Fuzzer.podspec
 
 archive: test archive_osx archive_ios
 
