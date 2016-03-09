@@ -1,4 +1,5 @@
 Fuzzer.xcodeproj/xcuserdata
 Fuzzer.xcodeproj/project.xcworkspace/xcuserdata
-Build-OSX/
-Build-Simulator/
+Build*/**/*
+DerivedData/**/*
+
