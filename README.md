@@ -44,11 +44,24 @@ Pull requests are more than welcome!
 
 #### Builtin Mutations
 
-TBD
+#### Delete Node Mutation
 
-#### Builtin replacements
+Removes random key/value pair from a dictionary
 
-TBD
+#### Replace Node Mutation
+
+Takes random key from dictionary and replaces its value with a value provided by [Node Replacement](https://github.com/AlexDenisov/Fuzzer#builtin-replacements)
+
+#### Builtin Replacements
+
+  - integer replacement:    replaces value with 'random' integer
+  - float replacement:      replaces value with 'random' float
+  - string replacement:     replaces value with 'random' string
+  - boolean replacement:    replaces value with 'random' boolean
+  - array replacement:      replaces value with 'random' array
+  - dictionary replacement: replaces value with 'random' dictionary
+  - null replacement:       replaces value with `[NSNull null]`
+  - nil replacement:        replaces value with `nil` (leads to removing key/value from dictionary)
 
 ### License
 
