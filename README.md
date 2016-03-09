@@ -30,9 +30,9 @@
 ```bash
 $ mkdir -p ./Components.make
 # iOS
-$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/BloodMagic/1.0.0/BloodMagic-iOS.make -O ./Components.make/BloodMagic-iOS.make
+$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/Fuzzer/0.2.0/Fuzzer-iOS.make -O ./Components.make/Fuzzer-iOS.make
 # OSX
-$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/BloodMagic/1.0.0/BloodMagic-OSX.make -O ./Components.make/BloodMagic-OSX.make
+$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/Fuzzer/0.2.0/Fuzzer-OSX.make -O ./Components.make/Fuzzer-OSX.make
 $ components install
 ```
 
