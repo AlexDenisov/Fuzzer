@@ -27,7 +27,7 @@
 
 #### [Components](https://github.com/AlexDenisov/Components)
 
-```
+```bash
 $ mkdir -p ./Components.make
 # iOS
 $ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/BloodMagic/1.0.0/BloodMagic-iOS.make -O ./Components.make/BloodMagic-iOS.make
