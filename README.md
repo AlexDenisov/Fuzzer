@@ -25,16 +25,9 @@
 
 ### Installation
 
-#### [Components](https://github.com/AlexDenisov/Components)
+#### Components (used by maintainers)
 
-```bash
-$ mkdir -p ./Components.make
-# iOS
-$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/Fuzzer/0.2.0/Fuzzer-iOS.make -O ./Components.make/Fuzzer-iOS.make
-# OSX
-$ wget https://raw.githubusercontent.com/AlexDenisov/Components/master/Components.make/Fuzzer/0.2.0/Fuzzer-OSX.make -O ./Components.make/Fuzzer-OSX.make
-$ components install
-```
+Get the latest [component .make file for Fuzzer](https://github.com/AlexDenisov/Components/tree/master/Components.make/Fuzzer).
 
 #### CocoaPods
 
