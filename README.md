@@ -2,6 +2,16 @@
 
 > Do not crash when your server lies
 
+### What is that?
+
+> We all know that the API has a specification. We all write tests to cover “happy paths” and to cover “unhappy paths” when work with the API.
+
+> It may seem that we’re pretty safe if we have tests and follow the specification. Well, actually no. Usually it works well in theory, but doesn’t really work in practice.
+
+> We can write as many tests as we need to cover all edge cases, but that is both time consuming and error prone. The best choice would be is to automate this process.
+
+from [Crash-free code with Fuzzer](https://tech.blacklane.com/2016/03/11/crash-free-code-with-fuzzer/)
+
 ### Example
 
 ```objectivec
