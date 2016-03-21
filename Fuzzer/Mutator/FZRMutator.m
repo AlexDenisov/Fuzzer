@@ -3,21 +3,21 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "Mutator.h"
-#import "MutationGenerator.h"
-#import "Mutation.h"
+#import "FZRMutator.h"
+#import "FZRMutationGenerator.h"
+#import "FZRMutation.h"
 
-@interface Mutator ()
+@interface FZRMutator ()
 
-@property MutationGenerator *mutationGenerator;
+@property FZRMutationGenerator *mutationGenerator;
 @property NSDictionary *sample;
 
 @end
 
-@implementation Mutator
+@implementation FZRMutator
 
-+ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(MutationGenerator *)mutationGenerator {
-    Mutator *mutator = [Mutator new];
++ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(FZRMutationGenerator *)mutationGenerator {
+    FZRMutator *mutator = [FZRMutator new];
 
     mutator.sample = [sample copy];
     mutator.mutationGenerator = mutationGenerator;
@@ -26,7 +26,7 @@
 }
 
 - (void)enumerateMutantsUsingBLock:(MutantEnumeratorBlock)mutantEnumeratorBlock {
-    for (id<Mutation> mutation in self.mutationGenerator.mutations) {
+    for (id<FZRMutation> mutation in self.mutationGenerator.mutations) {
         for (NSString *key in self.sample.allKeys) {
             NSDictionary *mutant = [mutation mutateSample:self.sample atNode:key];
             mutantEnumeratorBlock(mutant);

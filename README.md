@@ -22,8 +22,8 @@ from [Crash-free code with Fuzzer](https://tech.blacklane.com/2016/03/11/crash-f
   };
 
   UserDeserializer *deserializer = [UserDeserializer new];
-  Mutator *mutator = [Mutator mutatorForSample:sample withMutationGenerator:[MutationGenerator builtinMutationGenerator]];
-  Engine *engine = [Engine engineWithMutator:mutator];
+  FZRMutator *mutator = [FZRMutator mutatorForSample:sample withMutationGenerator:[FZRMutationGenerator builtinMutationGenerator]];
+  FZREngine *engine = [FZREngine engineWithMutator:mutator];
 
   NSArray *reports = [engine runEngineOverMutants:^(NSDictionary *mutant) {
     [deserializer deserializeUser:mutant];
@@ -53,11 +53,11 @@ Pull requests are more than welcome!
 
 #### Builtin Mutations
 
-#### Delete Node Mutation
+#### Delete Node FZRMutation
 
 Removes random key/value pair from a dictionary
 
-#### Replace Node Mutation
+#### Replace Node FZRMutation
 
 Takes random key from dictionary and replaces its value with a value provided by [Node Replacement](https://github.com/AlexDenisov/Fuzzer#builtin-replacements)
 

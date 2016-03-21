@@ -3,9 +3,9 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "Mutation.h"
+#import "FZRMutation.h"
 
-@interface DeleteNodeMutation : NSObject
-    <Mutation>
+@interface FZRDeleteNodeMutation : NSObject
+    <FZRMutation>
 
 @end

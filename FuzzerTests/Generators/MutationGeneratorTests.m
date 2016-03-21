@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "MutationGenerator.h"
-#import "NodeReplacement.h"
-#import "DeleteNodeMutation.h"
-#import "ReplaceNodeMutation.h"
+#import "FZRMutationGenerator.h"
+#import "FZRNodeReplacement.h"
+#import "FZRDeleteNodeMutation.h"
+#import "FZRReplaceNodeMutation.h"
 
 @interface MutationGeneratorTests : XCTestCase
 
@@ -19,33 +19,33 @@
 @implementation MutationGeneratorTests
 
 - (void)test_generates_delete_node_mutation {
-    DeleteNodeMutation *mutation = [DeleteNodeMutation new];
-    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[mutation]];
+    FZRDeleteNodeMutation *mutation = [FZRDeleteNodeMutation new];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[mutation]];
     XCTAssertEqual([mutationGenerator mutations].count, 1);
 }
 
 - (void)test_generates_replace_node_mutations {
     NSMutableArray *replacements = [NSMutableArray new];
-    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
-        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    for (FZRNodeReplacement *replacement in @[ [FZRNodeReplacement stringReplacement], [FZRNodeReplacement floatReplacement], [FZRNodeReplacement integerReplacement] ]) {
+        [replacements addObject:[FZRReplaceNodeMutation mutationWithReplacement:replacement]];
     }
 
-    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:replacements];
     XCTAssertEqual([mutationGenerator mutations].count, 3);
 }
 
 - (void)test_combines_two_generators {
-    DeleteNodeMutation *mutation = [DeleteNodeMutation new];
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[mutation]];
+    FZRDeleteNodeMutation *mutation = [FZRDeleteNodeMutation new];
+    FZRMutationGenerator *deleteNodeMutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[mutation]];
 
     NSMutableArray *replacements = [NSMutableArray new];
-    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
-        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    for (FZRNodeReplacement *replacement in @[ [FZRNodeReplacement stringReplacement], [FZRNodeReplacement floatReplacement], [FZRNodeReplacement integerReplacement] ]) {
+        [replacements addObject:[FZRReplaceNodeMutation mutationWithReplacement:replacement]];
     }
 
-    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
+    FZRMutationGenerator *replaceNodeMutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:replacements];
 
-    MutationGenerator *mutationGenerator = [MutationGenerator combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator combineMutationGenerators:@[deleteNodeMutationGenerator, replaceNodeMutationGenerator]];
     XCTAssertEqual([mutationGenerator mutations].count, 4);
 }
 

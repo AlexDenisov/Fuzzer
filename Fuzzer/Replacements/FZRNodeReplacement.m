@@ -3,17 +3,17 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "NodeReplacement.h"
+#import "FZRNodeReplacement.h"
 
-@interface NodeReplacement ()
+@interface FZRNodeReplacement ()
 
 @property id value;
 
 @end
 
-@implementation NodeReplacement
+@implementation FZRNodeReplacement
 
-+ (NSArray <NodeReplacement *> *)builtinReplacements {
++ (NSArray <FZRNodeReplacement *> *)builtinReplacements {
     return @[
             [self integerReplacement],
             [self floatReplacement],
@@ -27,7 +27,7 @@
 }
 
 + (instancetype)replacementWithValue:(id)value {
-    NodeReplacement *replacement = [NodeReplacement new];
+    FZRNodeReplacement *replacement = [FZRNodeReplacement new];
 
     replacement.value = value;
 

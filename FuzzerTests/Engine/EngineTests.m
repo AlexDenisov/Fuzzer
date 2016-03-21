@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Mutator.h"
-#import "MutationGenerator.h"
-#import "DeleteNodeMutation.h"
-#import "Engine.h"
-#import "Report.h"
+#import "FZRMutator.h"
+#import "FZRMutationGenerator.h"
+#import "FZRDeleteNodeMutation.h"
+#import "FZREngine.h"
+#import "FZRReport.h"
 
 @interface EngineTests : XCTestCase
 
@@ -25,9 +25,9 @@
             @"last name" : @"Doe"
     };
 
-    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
-    Engine *engine = [Engine engineWithMutator:mutator];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[[FZRDeleteNodeMutation new]]];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:mutationGenerator];
+    FZREngine *engine = [FZREngine engineWithMutator:mutator];
 
     NSException *exception = [NSException exceptionWithName:@"Nothing" reason:@"No reason" userInfo:@{}];
 
@@ -35,8 +35,8 @@
         @throw exception;
     }];
 
-    Report *firstnameLessReport = [Report reportWithMutant:@{ @"last name" : @"Doe" } exception:exception];
-    Report *lastnameLessReport = [Report reportWithMutant:@{ @"first name" : @"John" } exception:exception];
+    FZRReport *firstnameLessReport = [FZRReport reportWithMutant:@{@"last name" : @"Doe"} exception:exception];
+    FZRReport *lastnameLessReport = [FZRReport reportWithMutant:@{@"first name" : @"John"} exception:exception];
 
     XCTAssertEqual(reports.count, 2);
 
@@ -50,9 +50,9 @@
             @"last name" : @"Doe"
     };
 
-    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
-    Engine *engine = [Engine engineWithMutator:mutator];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[[FZRDeleteNodeMutation new]]];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:mutationGenerator];
+    FZREngine *engine = [FZREngine engineWithMutator:mutator];
 
     NSArray *reports = [engine runEngineOverMutants:^(NSDictionary *mutant) {
         // all good

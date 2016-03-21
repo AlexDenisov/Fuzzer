@@ -5,11 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NodeReplacement : NSObject
+@interface FZRNodeReplacement : NSObject
 
 + (instancetype)replacementWithValue:(id)value;
 
-+ (NSArray <NodeReplacement *> *)builtinReplacements;
++ (NSArray <FZRNodeReplacement *> *)builtinReplacements;
 
 + (instancetype)integerReplacement;
 + (instancetype)floatReplacement;

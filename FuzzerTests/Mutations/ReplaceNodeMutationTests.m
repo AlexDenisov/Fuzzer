@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ReplaceNodeMutation.h"
-#import "NodeReplacement.h"
+#import "FZRReplaceNodeMutation.h"
+#import "FZRNodeReplacement.h"
 
 @interface ReplaceNodeMutationTests : XCTestCase
 
@@ -17,9 +17,9 @@
 @implementation ReplaceNodeMutationTests
 
 - (void)test_replaces_specific_node_with_string {
-    NodeReplacement *replacement = [NodeReplacement stringReplacement];
+    FZRNodeReplacement *replacement = [FZRNodeReplacement stringReplacement];
 
-    ReplaceNodeMutation *mutation = [ReplaceNodeMutation mutationWithReplacement:replacement];
+    FZRReplaceNodeMutation *mutation = [FZRReplaceNodeMutation mutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",
@@ -41,9 +41,9 @@
 }
 
 - (void)test_replaces_specific_node_with_integer {
-    NodeReplacement *replacement = [NodeReplacement integerReplacement];
+    FZRNodeReplacement *replacement = [FZRNodeReplacement integerReplacement];
 
-    ReplaceNodeMutation *mutation = [ReplaceNodeMutation mutationWithReplacement:replacement];
+    FZRReplaceNodeMutation *mutation = [FZRReplaceNodeMutation mutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",

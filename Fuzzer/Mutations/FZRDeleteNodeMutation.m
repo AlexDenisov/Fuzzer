@@ -3,9 +3,9 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "DeleteNodeMutation.h"
+#import "FZRDeleteNodeMutation.h"
 
-@implementation DeleteNodeMutation
+@implementation FZRDeleteNodeMutation
 
 - (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName {
     NSMutableDictionary *mutatedCopy = [NSMutableDictionary dictionaryWithDictionary:sample];

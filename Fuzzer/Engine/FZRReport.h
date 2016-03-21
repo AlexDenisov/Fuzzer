@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Report : NSObject
+@interface FZRReport : NSObject
 
 + (instancetype)reportWithMutant:(NSDictionary *)mutant exception:(NSException *)exception;
 

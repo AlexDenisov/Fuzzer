@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/AlexDenisov/Fuzzer.git", :tag => "0.2.0" }
   s.source_files  = "Fuzzer/**/*.{h,m}"
-  s.public_header_files = "Fuzzer/Fuzzer.h", "Fuzzer/Engine/Engine.h", "Fuzzer/Engine/Report.h", "Fuzzer/Generators/MutationGenerator.h", "Fuzzer/Mutations/Mutation.h", "Fuzzer/Mutator/Mutator.h", "Fuzzer/Replacements/NodeReplacement.h"
+  s.public_header_files = "Fuzzer/Fuzzer.h", "Fuzzer/FZREngine/FZREngine.h", "Fuzzer/FZREngine/FZRReport.h", "Fuzzer/Generators/FZRMutationGenerator.h", "Fuzzer/Mutations/FZRMutation.h", "Fuzzer/FZRMutator/FZRMutator.h", "Fuzzer/Replacements/FZRNodeReplacement.h"
   s.header_dir = "Fuzzer"
 
   s.requires_arc = true

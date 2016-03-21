@@ -3,19 +3,19 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "Report.h"
+#import "FZRReport.h"
 
-@interface Report ()
+@interface FZRReport ()
 
 @property NSDictionary *mutant;
 @property NSException *exception;
 
 @end
 
-@implementation Report
+@implementation FZRReport
 
 + (instancetype)reportWithMutant:(NSDictionary *)mutant exception:(NSException *)exception {
-    Report *report = [self new];
+    FZRReport *report = [self new];
 
     report.mutant = mutant;
     report.exception = exception;
@@ -23,7 +23,7 @@
     return report;
 }
 
-- (BOOL)isEqual:(Report *)report {
+- (BOOL)isEqual:(FZRReport *)report {
     return [self.exception isEqual:report.exception] && [self.mutant isEqual:report.mutant];
 }
 

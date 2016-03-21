@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "MutationGenerator.h"
-#import "Mutator.h"
-#import "NodeReplacement.h"
-#import "DeleteNodeMutation.h"
-#import "ReplaceNodeMutation.h"
+#import "FZRMutationGenerator.h"
+#import "FZRMutator.h"
+#import "FZRNodeReplacement.h"
+#import "FZRDeleteNodeMutation.h"
+#import "FZRReplaceNodeMutation.h"
 
 @interface GeneralMutatorTests : XCTestCase
 
@@ -41,8 +41,8 @@
             @"last name" : @"Doe"
     };
 
-    MutationGenerator *mutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[[FZRDeleteNodeMutation new]]];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:mutationGenerator];
 
     NSMutableArray *mutants = [NSMutableArray new];
 
@@ -64,8 +64,8 @@
             @"age" : @42
     };
 
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:deleteNodeMutationGenerator];
+    FZRMutationGenerator *deleteNodeMutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[[FZRDeleteNodeMutation new]]];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:deleteNodeMutationGenerator];
     XCTAssertEqual(mutator.amountOfMutants, 3);
 }
 
@@ -76,18 +76,18 @@
             @"age" : @42
     };
 
-    MutationGenerator *deleteNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:@[[DeleteNodeMutation new]]];
+    FZRMutationGenerator *deleteNodeMutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:@[[FZRDeleteNodeMutation new]]];
 
     NSMutableArray *replacements = [NSMutableArray new];
-    for (NodeReplacement *replacement in @[ [NodeReplacement stringReplacement], [NodeReplacement floatReplacement], [NodeReplacement integerReplacement] ]) {
-        [replacements addObject:[ReplaceNodeMutation mutationWithReplacement:replacement]];
+    for (FZRNodeReplacement *replacement in @[ [FZRNodeReplacement stringReplacement], [FZRNodeReplacement floatReplacement], [FZRNodeReplacement integerReplacement] ]) {
+        [replacements addObject:[FZRReplaceNodeMutation mutationWithReplacement:replacement]];
     }
 
-    MutationGenerator *replaceNodeMutationGenerator = [MutationGenerator mutationGeneratorWithMutations:replacements];
+    FZRMutationGenerator *replaceNodeMutationGenerator = [FZRMutationGenerator mutationGeneratorWithMutations:replacements];
 
-    MutationGenerator *mutationGenerator = [MutationGenerator combineMutationGenerators:@[ deleteNodeMutationGenerator, replaceNodeMutationGenerator ]];
+    FZRMutationGenerator *mutationGenerator = [FZRMutationGenerator combineMutationGenerators:@[deleteNodeMutationGenerator, replaceNodeMutationGenerator]];
 
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:mutationGenerator];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:mutationGenerator];
     XCTAssertEqual(mutator.amountOfMutants, 12);
 }
 
@@ -98,7 +98,7 @@
             @"age" : @42
     };
 
-    Mutator *mutator = [Mutator mutatorForSample:original withMutationGenerator:[MutationGenerator builtinMutationGenerator]];
+    FZRMutator *mutator = [FZRMutator mutatorForSample:original withMutationGenerator:[FZRMutationGenerator builtinMutationGenerator]];
     XCTAssertEqual(mutator.amountOfMutants, 27, @"(All ReplaceNode mutations + DeleteNode mutations) * sample.count");
 }
 

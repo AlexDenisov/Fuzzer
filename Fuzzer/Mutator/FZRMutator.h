@@ -7,11 +7,11 @@
 
 typedef void (^MutantEnumeratorBlock)(NSDictionary *mutant);
 
-@class MutationGenerator;
+@class FZRMutationGenerator;
 
-@interface Mutator : NSObject
+@interface FZRMutator : NSObject
 
-+ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(MutationGenerator *)mutationGenerator;
++ (instancetype)mutatorForSample:(NSDictionary *)sample withMutationGenerator:(FZRMutationGenerator *)mutationGenerator;
 
 - (void)enumerateMutantsUsingBLock:(MutantEnumeratorBlock)mutantEnumeratorBlock;
 

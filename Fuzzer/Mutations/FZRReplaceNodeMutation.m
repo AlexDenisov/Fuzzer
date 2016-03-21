@@ -3,19 +3,19 @@
 // Copyright (c) 2016 lowlevelbits. All rights reserved.
 //
 
-#import "ReplaceNodeMutation.h"
-#import "NodeReplacement.h"
+#import "FZRReplaceNodeMutation.h"
+#import "FZRNodeReplacement.h"
 
-@interface ReplaceNodeMutation ()
+@interface FZRReplaceNodeMutation ()
 
-@property NodeReplacement *replacement;
+@property FZRNodeReplacement *replacement;
 
 @end
 
-@implementation ReplaceNodeMutation
+@implementation FZRReplaceNodeMutation
 
-+ (id<Mutation>)mutationWithReplacement:(NodeReplacement *)replacement {
-    ReplaceNodeMutation *mutation = [ReplaceNodeMutation new];
++ (id<FZRMutation>)mutationWithReplacement:(FZRNodeReplacement *)replacement {
+    FZRReplaceNodeMutation *mutation = [FZRReplaceNodeMutation new];
 
     mutation.replacement = replacement;
 

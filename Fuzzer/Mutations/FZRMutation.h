@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol Mutation <NSObject>
+@protocol FZRMutation <NSObject>
 
 - (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName;
 

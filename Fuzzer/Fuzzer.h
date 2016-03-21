@@ -8,9 +8,9 @@
 
 #pragma once
 
-#import <Fuzzer/Engine.h>
-#import <Fuzzer/MutationGenerator.h>
-#import <Fuzzer/Mutation.h>
-#import <Fuzzer/Mutator.h>
-#import <Fuzzer/NodeReplacement.h>
-#import <Fuzzer/Report.h>
+#import <Fuzzer/FZREngine.h>
+#import <Fuzzer/FZRMutationGenerator.h>
+#import <Fuzzer/FZRMutation.h>
+#import <Fuzzer/FZRMutator.h>
+#import <Fuzzer/FZRNodeReplacement.h>
+#import <Fuzzer/FZRReport.h>
