@@ -22,10 +22,10 @@ from [Crash-free code with Fuzzer](https://tech.blacklane.com/2016/03/11/crash-f
   };
 
   UserDeserializer *deserializer = [UserDeserializer new];
-  FZRMutator *mutator = [FZRMutator mutatorForSample:sample withMutationGenerator:[FZRMutationGenerator builtinMutationGenerator]];
-  FZREngine *engine = [FZREngine engineWithMutator:mutator];
 
-  NSArray *reports = [engine runEngineOverMutants:^(NSDictionary *mutant) {
+  FZRRunner *runner = [FZRRunner runnerWithBuiltinMutationsForSample:sample];
+
+  NSArray *reports = [runner enumerateMutantsUsingBlock:^(NSDictionary *mutant) {
     [deserializer deserializeUser:mutant];
   }];
 
@@ -42,7 +42,7 @@ Get the latest [component .make file for Fuzzer](https://github.com/AlexDenisov/
 #### CocoaPods
 
 ```ruby
-pod 'Fuzzer', '0.2.0'
+pod 'Fuzzer', '0.3.0'
 ```
 
 #### Carthage
@@ -53,11 +53,11 @@ Pull requests are more than welcome!
 
 #### Builtin Mutations
 
-#### Delete Node FZRMutation
+#### Delete Node Mutation
 
 Removes random key/value pair from a dictionary
 
-#### Replace Node FZRMutation
+#### Replace Node Mutation
 
 Takes random key from dictionary and replaces its value with a value provided by [Node Replacement](https://github.com/AlexDenisov/Fuzzer#builtin-replacements)
 
