@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "FZRDeleteNodeMutation.h"
+#import <Fuzzer/Fuzzer.h>
 
 @interface DeleteNodeMutationTests : XCTestCase
 
@@ -16,7 +16,7 @@
 @implementation DeleteNodeMutationTests
 
 - (void)test_deletes_node_from_dictionary {
-    FZRDeleteNodeMutation *mutation = [FZRDeleteNodeMutation new];
+    id<FZRMutation> mutation = [FZRMutationFactory builtinDeleteNodeMutation];
 
     NSDictionary *original = @{
             @"first name" : @"john",

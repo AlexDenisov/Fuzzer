@@ -7,8 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "FZRReplaceNodeMutation.h"
-#import "FZRNodeReplacement.h"
+#import <Fuzzer/Fuzzer.h>
 
 @interface ReplaceNodeMutationTests : XCTestCase
 
@@ -19,7 +18,7 @@
 - (void)test_replaces_specific_node_with_string {
     FZRNodeReplacement *replacement = [FZRNodeReplacement stringReplacement];
 
-    FZRReplaceNodeMutation *mutation = [FZRReplaceNodeMutation mutationWithReplacement:replacement];
+    id<FZRMutation> mutation = [FZRMutationFactory replaceNodeMutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",
@@ -43,7 +42,7 @@
 - (void)test_replaces_specific_node_with_integer {
     FZRNodeReplacement *replacement = [FZRNodeReplacement integerReplacement];
 
-    FZRReplaceNodeMutation *mutation = [FZRReplaceNodeMutation mutationWithReplacement:replacement];
+    id<FZRMutation> mutation = [FZRMutationFactory replaceNodeMutationWithReplacement:replacement];
 
     NSDictionary *original = @{
             @"first name" : @"john",
