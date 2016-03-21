@@ -4,9 +4,7 @@
 //
 
 #import "FZRMutationGenerator.h"
-#import "FZRDeleteNodeMutation.h"
-#import "FZRReplaceNodeMutation.h"
-#import "FZRNodeReplacement.h"
+#import "FZRMutationFactory.h"
 
 @interface FZRMutationGenerator ()
 
@@ -17,17 +15,7 @@
 @implementation FZRMutationGenerator
 
 + (instancetype)builtinMutationGenerator {
-    NSArray *replacements = [FZRNodeReplacement builtinReplacements];
-
-    NSMutableArray *mutations = [NSMutableArray arrayWithCapacity:replacements.count];
-    for (FZRNodeReplacement *replacement in replacements) {
-        id<FZRMutation> mutation = [FZRReplaceNodeMutation mutationWithReplacement:replacement];
-        [mutations addObject:mutation];
-    }
-
-    [mutations addObject:[FZRDeleteNodeMutation new]];
-
-    return [self mutationGeneratorWithMutations:mutations];
+    return [self mutationGeneratorWithMutations:[FZRMutationFactory builtinMutations]];
 }
 
 + (instancetype)mutationGeneratorWithMutations:(NSArray *)mutations {

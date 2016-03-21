@@ -10,7 +10,9 @@
 
 #import <Fuzzer/FZREngine.h>
 #import <Fuzzer/FZRMutationGenerator.h>
+#import <Fuzzer/FZRMutationFactory.h>
 #import <Fuzzer/FZRMutation.h>
 #import <Fuzzer/FZRMutator.h>
 #import <Fuzzer/FZRNodeReplacement.h>
 #import <Fuzzer/FZRReport.h>
+#import <Fuzzer/FZRRunner.h>
