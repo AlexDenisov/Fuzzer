@@ -1,3 +1,6 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Cocoapods compatible](https://cocoapod-badges.herokuapp.com/v/Fuzzer/badge.png)](https://cocoapods.org/?q=fuzzer)
+
 # Fuzzer
 
 > Do not crash when your server lies
