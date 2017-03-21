@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DF3DB271E814F890027A321 /* FZRDeleteNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87641E21B59E6FD23EF217 /* FZRDeleteNodeMutation.m */; };
+		0DF3DB281E814F890027A321 /* FZRReplaceNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87664F901EF4B9F6271F49 /* FZRReplaceNodeMutation.m */; };
+		0DF3DB291E814F890027A321 /* FZRMutationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932F7E1C9FFA2D00B4903F /* FZRMutationFactory.m */; };
+		0DF3DB2A1E814F890027A321 /* FZRNodeReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87609BA27EC2754EFE4B72 /* FZRNodeReplacement.m */; };
+		0DF3DB2B1E814F890027A321 /* FZRReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D71E7777910F7AF2D6A /* FZRReport.m */; };
+		0DF3DB2C1E814F890027A321 /* FZRRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8760EEF95C9B0D61EEAA31 /* FZRRunner.m */; };
+		0DF3DB2F1E814F890027A321 /* FZRMutationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87621CDDA3856E6E3CF34F /* FZRMutationFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB301E814F890027A321 /* FZRMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87681319DA1072F4F59426 /* FZRMutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB311E814F890027A321 /* FZRNodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* FZRNodeReplacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB321E814F890027A321 /* FZRReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876EBA5CFF28D9A8CA710B /* FZRReport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB331E814F890027A321 /* FZRRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87632106630FAA28F252C6 /* FZRRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB341E814F890027A321 /* FZRDeleteNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87680E869BB15D27780608 /* FZRDeleteNodeMutation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0DF3DB351E814F890027A321 /* Fuzzer.h in Headers */ = {isa = PBXBuildFile; fileRef = 46932F091C8ED95400B4903F /* Fuzzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF3DB361E814F890027A321 /* FZRReplaceNodeMutation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876477B311AC55E096226B /* FZRReplaceNodeMutation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		46932F031C8E177200B4903F /* Fuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46932EF21C8E175400B4903F /* Fuzzer.framework */; };
 		46932F0A1C8ED98600B4903F /* Fuzzer.h in Headers */ = {isa = PBXBuildFile; fileRef = 46932F091C8ED95400B4903F /* Fuzzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46932F7F1C9FFA2D00B4903F /* FZRMutationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932F7E1C9FFA2D00B4903F /* FZRMutationFactory.m */; };
@@ -38,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DF3DB3B1E814F890027A321 /* Fuzzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fuzzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Fuzzer-ios-dynamic-Info.plist"; path = "/Users/adodatko/projects/MonspaceVirtualHeaven/forks/Fuzzer-dodikk/Fuzzer-ios-dynamic-Info.plist"; sourceTree = "<absolute>"; };
 		46932EF21C8E175400B4903F /* Fuzzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fuzzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46932EF61C8E175400B4903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46932EFE1C8E177200B4903F /* FuzzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +78,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DF3DB2D1E814F890027A321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46932EEE1C8E175400B4903F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +109,7 @@
 				46932EF31C8E175400B4903F /* Fuzzer */,
 				46932EFF1C8E177200B4903F /* FuzzerTests */,
 				46932EE41C8E146600B4903F /* Products */,
+				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +118,7 @@
 			children = (
 				46932EF21C8E175400B4903F /* Fuzzer.framework */,
 				46932EFE1C8E177200B4903F /* FuzzerTests.xctest */,
+				0DF3DB3B1E814F890027A321 /* Fuzzer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +215,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0DF3DB2E1E814F890027A321 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DF3DB2F1E814F890027A321 /* FZRMutationFactory.h in Headers */,
+				0DF3DB301E814F890027A321 /* FZRMutation.h in Headers */,
+				0DF3DB311E814F890027A321 /* FZRNodeReplacement.h in Headers */,
+				0DF3DB321E814F890027A321 /* FZRReport.h in Headers */,
+				0DF3DB331E814F890027A321 /* FZRRunner.h in Headers */,
+				0DF3DB341E814F890027A321 /* FZRDeleteNodeMutation.h in Headers */,
+				0DF3DB351E814F890027A321 /* Fuzzer.h in Headers */,
+				0DF3DB361E814F890027A321 /* FZRReplaceNodeMutation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46932EEF1C8E175400B4903F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +248,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DF3DB381E814F890027A321 /* Build configuration list for PBXNativeTarget "Fuzzer-iOS-dynamic" */;
+			buildPhases = (
+				0DF3DB261E814F890027A321 /* Sources */,
+				0DF3DB2D1E814F890027A321 /* Frameworks */,
+				0DF3DB2E1E814F890027A321 /* Headers */,
+				0DF3DB371E814F890027A321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuzzer-iOS-dynamic";
+			productName = Mutation;
+			productReference = 0DF3DB3B1E814F890027A321 /* Fuzzer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		46932EF11C8E175400B4903F /* Fuzzer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46932EF71C8E175400B4903F /* Build configuration list for PBXNativeTarget "Fuzzer" */;
@@ -276,11 +334,19 @@
 			targets = (
 				46932EF11C8E175400B4903F /* Fuzzer */,
 				46932EFD1C8E177200B4903F /* FuzzerTests */,
+				0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0DF3DB371E814F890027A321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46932EF01C8E175400B4903F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +364,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0DF3DB261E814F890027A321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DF3DB271E814F890027A321 /* FZRDeleteNodeMutation.m in Sources */,
+				0DF3DB281E814F890027A321 /* FZRReplaceNodeMutation.m in Sources */,
+				0DF3DB291E814F890027A321 /* FZRMutationFactory.m in Sources */,
+				0DF3DB2A1E814F890027A321 /* FZRNodeReplacement.m in Sources */,
+				0DF3DB2B1E814F890027A321 /* FZRReport.m in Sources */,
+				0DF3DB2C1E814F890027A321 /* FZRRunner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46932EED1C8E175400B4903F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +411,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0DF3DB391E814F890027A321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.3.0;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Fuzzer-ios-dynamic-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.Fuzzer;
+				PRODUCT_NAME = Fuzzer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0DF3DB3A1E814F890027A321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.3.0;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Fuzzer-ios-dynamic-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.Fuzzer;
+				PRODUCT_NAME = Fuzzer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		46932EE81C8E146600B4903F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,7 +468,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -392,7 +511,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -414,6 +533,7 @@
 		46932EF81C8E175400B4903F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.3.0;
 				DEFINES_MODULE = YES;
@@ -433,6 +553,7 @@
 		46932EF91C8E175400B4903F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.3.0;
 				DEFINES_MODULE = YES;
@@ -476,6 +597,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0DF3DB381E814F890027A321 /* Build configuration list for PBXNativeTarget "Fuzzer-iOS-dynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DF3DB391E814F890027A321 /* Debug */,
+				0DF3DB3A1E814F890027A321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		46932EDE1C8E146600B4903F /* Build configuration list for PBXProject "Fuzzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
