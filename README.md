@@ -47,7 +47,12 @@ pod 'Fuzzer', '0.3.0'
 
 #### Carthage
 
-Pull requests are more than welcome!
+Add the line below to your `Cartfile`
+
+```
+github "AlexDenisov/Fuzzer"
+```
+
 
 ### Out of the box
 
