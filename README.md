@@ -50,11 +50,18 @@ pod 'Fuzzer', '0.3.0'
 
 #### Carthage
 
-Add the line below to your `Cartfile`
+Add the line below to your `Cartfile` to get the latest version of Fuzzer.
 
 ```
 github "AlexDenisov/Fuzzer"
 ```
+
+Please consider [Carthage Documentation](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md) if you want to install a specific version of Fuzzer or make any advanced setup.
+
+```
+Note : Carthage support has been introduded in [v0.3.1](https://github.com/AlexDenisov/Fuzzer/tree/0.3.1)
+```
+
 
 
 ### Out of the box
