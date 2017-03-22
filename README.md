@@ -1,3 +1,6 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Cocoapods compatible](https://cocoapod-badges.herokuapp.com/v/Fuzzer/badge.png)](https://cocoapods.org/?q=fuzzer)
+
 # Fuzzer
 
 > Do not crash when your server lies
@@ -47,11 +50,19 @@ pod 'Fuzzer', '0.3.0'
 
 #### Carthage
 
-Add the line below to your `Cartfile`
+Add the line below to your `Cartfile` to get the latest version of Fuzzer.
 
 ```
 github "AlexDenisov/Fuzzer"
 ```
+
+Please consider [Carthage Documentation](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md) if you want to install a specific version of Fuzzer or make any advanced setup.
+
+```
+Note : Carthage support has been introduded in v0.3.1 
+So older versions of Fuzzer cannot be installd with Carthage.
+```
+
 
 
 ### Out of the box
