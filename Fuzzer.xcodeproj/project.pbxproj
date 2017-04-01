@@ -106,7 +106,7 @@
 		6B876EBA5CFF28D9A8CA710B /* FZRReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZRReport.h; sourceTree = "<group>"; };
 		7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFuzzer-lib-ios-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-static-lib.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EAD8C221E8FC364004D7121 /* FuzzerTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests copy-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests-ios-static-lib-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests-ios-static-lib-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 				46932EFF1C8E177200B4903F /* FuzzerTests */,
 				46932EE41C8E146600B4903F /* Products */,
 				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
-				7EAD8C221E8FC364004D7121 /* FuzzerTests copy-Info.plist */,
+				7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -748,7 +748,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "FuzzerTests copy-Info.plist";
+				INFOPLIST_FILE = "FuzzerTests-ios-static-lib-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
@@ -761,7 +761,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "FuzzerTests copy-Info.plist";
+				INFOPLIST_FILE = "FuzzerTests-ios-static-lib-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
