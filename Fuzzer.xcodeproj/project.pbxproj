@@ -45,6 +45,10 @@
 		7EAD8C0E1E8FC26E004D7121 /* FZRReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D71E7777910F7AF2D6A /* FZRReport.m */; };
 		7EAD8C0F1E8FC26E004D7121 /* FZRMutationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932F7E1C9FFA2D00B4903F /* FZRMutationFactory.m */; };
 		7EAD8C101E8FC26E004D7121 /* FZRRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8760EEF95C9B0D61EEAA31 /* FZRRunner.m */; };
+		7EAD8C181E8FC364004D7121 /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
+		7EAD8C191E8FC364004D7121 /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
+		7EAD8C1A1E8FC364004D7121 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* RunnerTests.m */; };
+		7EAD8C251E8FC386004D7121 /* libFuzzer-lib-ios-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 46932EF11C8E175400B4903F;
 			remoteInfo = Mutation;
+		};
+		7EAD8C231E8FC382004D7121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46932EDB1C8E146600B4903F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAD8C011E8FC215004D7121;
+			remoteInfo = "Fuzzer-lib-ios-static";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -94,6 +105,8 @@
 		6B876D71E7777910F7AF2D6A /* FZRReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZRReport.m; sourceTree = "<group>"; };
 		6B876EBA5CFF28D9A8CA710B /* FZRReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZRReport.h; sourceTree = "<group>"; };
 		7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFuzzer-lib-ios-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-static-lib.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C221E8FC364004D7121 /* FuzzerTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests copy-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +139,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8C1B1E8FC364004D7121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C251E8FC386004D7121 /* libFuzzer-lib-ios-static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +157,7 @@
 				46932EFF1C8E177200B4903F /* FuzzerTests */,
 				46932EE41C8E146600B4903F /* Products */,
 				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
+				7EAD8C221E8FC364004D7121 /* FuzzerTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +168,7 @@
 				46932EFE1C8E177200B4903F /* FuzzerTests.xctest */,
 				0DF3DB3B1E814F890027A321 /* Fuzzer.framework */,
 				7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */,
+				7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +369,24 @@
 			productReference = 7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		7EAD8C141E8FC364004D7121 /* FuzzerTests-ios-static-lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAD8C1E1E8FC364004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-static-lib" */;
+			buildPhases = (
+				7EAD8C171E8FC364004D7121 /* Sources */,
+				7EAD8C1B1E8FC364004D7121 /* Frameworks */,
+				7EAD8C1D1E8FC364004D7121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAD8C241E8FC382004D7121 /* PBXTargetDependency */,
+			);
+			name = "FuzzerTests-ios-static-lib";
+			productName = MutationTests;
+			productReference = 7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,6 +424,7 @@
 				46932EFD1C8E177200B4903F /* FuzzerTests */,
 				0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */,
 				7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */,
+				7EAD8C141E8FC364004D7121 /* FuzzerTests-ios-static-lib */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +445,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		46932EFC1C8E177200B4903F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C1D1E8FC364004D7121 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,6 +510,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8C171E8FC364004D7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C181E8FC364004D7121 /* DeleteNodeMutationTests.m in Sources */,
+				7EAD8C191E8FC364004D7121 /* ReplaceNodeMutationTests.m in Sources */,
+				7EAD8C1A1E8FC364004D7121 /* RunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -468,6 +527,11 @@
 			isa = PBXTargetDependency;
 			target = 46932EF11C8E175400B4903F /* Fuzzer */;
 			targetProxy = 46932F041C8E177200B4903F /* PBXContainerItemProxy */;
+		};
+		7EAD8C241E8FC382004D7121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */;
+			targetProxy = 7EAD8C231E8FC382004D7121 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -680,6 +744,32 @@
 			};
 			name = Release;
 		};
+		7EAD8C1F1E8FC364004D7121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EAD8C201E8FC364004D7121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -726,6 +816,15 @@
 				7EAD8C091E8FC216004D7121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+		};
+		7EAD8C1E1E8FC364004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-static-lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAD8C1F1E8FC364004D7121 /* Debug */,
+				7EAD8C201E8FC364004D7121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
