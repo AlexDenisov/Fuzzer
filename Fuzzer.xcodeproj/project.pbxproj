@@ -134,7 +134,6 @@
 			children = (
 				46932EF31C8E175400B4903F /* Fuzzer */,
 				46932EFF1C8E177200B4903F /* FuzzerTests */,
-				7EAD8C031E8FC216004D7121 /* Fuzzer-lib-ios-static */,
 				46932EE41C8E146600B4903F /* Products */,
 				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
 			);
@@ -238,13 +237,6 @@
 				6B876290DB59DDE193054940 /* RunnerTests.m */,
 			);
 			path = Runner;
-			sourceTree = "<group>";
-		};
-		7EAD8C031E8FC216004D7121 /* Fuzzer-lib-ios-static */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Fuzzer-lib-ios-static";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
