@@ -49,6 +49,10 @@
 		7EAD8C191E8FC364004D7121 /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
 		7EAD8C1A1E8FC364004D7121 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* RunnerTests.m */; };
 		7EAD8C251E8FC386004D7121 /* libFuzzer-lib-ios-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */; };
+		7EAD8C2A1E8FC5F8004D7121 /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
+		7EAD8C2B1E8FC5F8004D7121 /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
+		7EAD8C2C1E8FC5F8004D7121 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* RunnerTests.m */; };
+		7EAD8C351E8FC629004D7121 /* Fuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF3DB3B1E814F890027A321 /* Fuzzer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7EAD8C011E8FC215004D7121;
 			remoteInfo = "Fuzzer-lib-ios-static";
+		};
+		7EAD8C361E8FC62D004D7121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46932EDB1C8E146600B4903F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DF3DB251E814F890027A321;
+			remoteInfo = "Fuzzer-iOS-dynamic";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -107,6 +118,8 @@
 		7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFuzzer-lib-ios-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-static-lib.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests-ios-static-lib-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests-ios-static-lib-Info.plist"; sourceTree = "<absolute>"; };
+		7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-dynamic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C341E8FC5F8004D7121 /* FuzzerTests-ios-dynamic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests-ios-dynamic-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests-ios-dynamic-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +160,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8C2D1E8FC5F8004D7121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C351E8FC629004D7121 /* Fuzzer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,6 +179,7 @@
 				46932EE41C8E146600B4903F /* Products */,
 				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
 				7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */,
+				7EAD8C341E8FC5F8004D7121 /* FuzzerTests-ios-dynamic-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +191,7 @@
 				0DF3DB3B1E814F890027A321 /* Fuzzer.framework */,
 				7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */,
 				7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */,
+				7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +410,24 @@
 			productReference = 7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7EAD8C261E8FC5F8004D7121 /* FuzzerTests-ios-dynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAD8C301E8FC5F8004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-dynamic" */;
+			buildPhases = (
+				7EAD8C291E8FC5F8004D7121 /* Sources */,
+				7EAD8C2D1E8FC5F8004D7121 /* Frameworks */,
+				7EAD8C2F1E8FC5F8004D7121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAD8C371E8FC62D004D7121 /* PBXTargetDependency */,
+			);
+			name = "FuzzerTests-ios-dynamic";
+			productName = MutationTests;
+			productReference = 7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -425,6 +466,7 @@
 				0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */,
 				7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */,
 				7EAD8C141E8FC364004D7121 /* FuzzerTests-ios-static-lib */,
+				7EAD8C261E8FC5F8004D7121 /* FuzzerTests-ios-dynamic */,
 			);
 		};
 /* End PBXProject section */
@@ -452,6 +494,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7EAD8C1D1E8FC364004D7121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C2F1E8FC5F8004D7121 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -520,6 +569,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8C291E8FC5F8004D7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C2A1E8FC5F8004D7121 /* DeleteNodeMutationTests.m in Sources */,
+				7EAD8C2B1E8FC5F8004D7121 /* ReplaceNodeMutationTests.m in Sources */,
+				7EAD8C2C1E8FC5F8004D7121 /* RunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -532,6 +591,11 @@
 			isa = PBXTargetDependency;
 			target = 7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */;
 			targetProxy = 7EAD8C231E8FC382004D7121 /* PBXContainerItemProxy */;
+		};
+		7EAD8C371E8FC62D004D7121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */;
+			targetProxy = 7EAD8C361E8FC62D004D7121 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -770,6 +834,32 @@
 			};
 			name = Release;
 		};
+		7EAD8C311E8FC5F8004D7121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-dynamic-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EAD8C321E8FC5F8004D7121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-dynamic-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -822,6 +912,15 @@
 			buildConfigurations = (
 				7EAD8C1F1E8FC364004D7121 /* Debug */,
 				7EAD8C201E8FC364004D7121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAD8C301E8FC5F8004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-dynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAD8C311E8FC5F8004D7121 /* Debug */,
+				7EAD8C321E8FC5F8004D7121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
