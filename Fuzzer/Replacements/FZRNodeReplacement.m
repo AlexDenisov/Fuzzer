@@ -7,7 +7,7 @@
 
 @interface FZRNodeReplacement ()
 
-@property id value;
+@property (atomic) id value;
 
 @end
 
