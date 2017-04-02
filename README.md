@@ -64,6 +64,18 @@ So older versions of Fuzzer cannot be installd with Carthage.
 ```
 
 
+#### Building From Source
+
+Typically, you won't have to do this. But if you do, a preferred approach for building from source is using [sub-projects](https://www.cocoanetics.com/2011/12/sub-projects-in-xcode/). 
+
+
+You can use either of the targets below depending on your needs:
+
+* `Fuzzer-lib-ios-static` - for legacy projects (up to `iOS 6`)
+* `Fuzzer-iOS-dynamic` - for swift and modern projects
+
+
+
 
 ### Out of the box
 

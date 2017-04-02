@@ -10,8 +10,8 @@
 
 @interface FZRRunner ()
 
-@property NSArray *mutations;
-@property NSDictionary *sample;
+@property (atomic) NSArray *mutations;
+@property (atomic) NSDictionary *sample;
 
 @end
 

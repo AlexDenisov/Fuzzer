@@ -39,6 +39,20 @@
 		6B876B44ECA88266ABCF5024 /* FZRRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87632106630FAA28F252C6 /* FZRRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B876B8761CF35AD9F96200E /* FZRNodeReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B87649CEA878957F505C6AE /* FZRNodeReplacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B876D1017D5A4800AB4E745 /* FZRReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B876EBA5CFF28D9A8CA710B /* FZRReport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EAD8C0B1E8FC26E004D7121 /* FZRDeleteNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87641E21B59E6FD23EF217 /* FZRDeleteNodeMutation.m */; };
+		7EAD8C0C1E8FC26E004D7121 /* FZRReplaceNodeMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87664F901EF4B9F6271F49 /* FZRReplaceNodeMutation.m */; };
+		7EAD8C0D1E8FC26E004D7121 /* FZRNodeReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87609BA27EC2754EFE4B72 /* FZRNodeReplacement.m */; };
+		7EAD8C0E1E8FC26E004D7121 /* FZRReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D71E7777910F7AF2D6A /* FZRReport.m */; };
+		7EAD8C0F1E8FC26E004D7121 /* FZRMutationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46932F7E1C9FFA2D00B4903F /* FZRMutationFactory.m */; };
+		7EAD8C101E8FC26E004D7121 /* FZRRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8760EEF95C9B0D61EEAA31 /* FZRRunner.m */; };
+		7EAD8C181E8FC364004D7121 /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
+		7EAD8C191E8FC364004D7121 /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
+		7EAD8C1A1E8FC364004D7121 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* RunnerTests.m */; };
+		7EAD8C251E8FC386004D7121 /* libFuzzer-lib-ios-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */; };
+		7EAD8C2A1E8FC5F8004D7121 /* DeleteNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765C661B120B05F887DBD /* DeleteNodeMutationTests.m */; };
+		7EAD8C2B1E8FC5F8004D7121 /* ReplaceNodeMutationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87680A8A44042F628E0159 /* ReplaceNodeMutationTests.m */; };
+		7EAD8C2C1E8FC5F8004D7121 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876290DB59DDE193054940 /* RunnerTests.m */; };
+		7EAD8C351E8FC629004D7121 /* Fuzzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF3DB3B1E814F890027A321 /* Fuzzer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +63,33 @@
 			remoteGlobalIDString = 46932EF11C8E175400B4903F;
 			remoteInfo = Mutation;
 		};
+		7EAD8C231E8FC382004D7121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46932EDB1C8E146600B4903F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAD8C011E8FC215004D7121;
+			remoteInfo = "Fuzzer-lib-ios-static";
+		};
+		7EAD8C361E8FC62D004D7121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46932EDB1C8E146600B4903F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DF3DB251E814F890027A321;
+			remoteInfo = "Fuzzer-iOS-dynamic";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7EAD8C001E8FC215004D7121 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0DF3DB3B1E814F890027A321 /* Fuzzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fuzzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +115,11 @@
 		6B87681319DA1072F4F59426 /* FZRMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZRMutation.h; sourceTree = "<group>"; };
 		6B876D71E7777910F7AF2D6A /* FZRReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZRReport.m; sourceTree = "<group>"; };
 		6B876EBA5CFF28D9A8CA710B /* FZRReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZRReport.h; sourceTree = "<group>"; };
+		7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFuzzer-lib-ios-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-static-lib.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests-ios-static-lib-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests-ios-static-lib-Info.plist"; sourceTree = "<absolute>"; };
+		7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuzzerTests-ios-dynamic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAD8C341E8FC5F8004D7121 /* FuzzerTests-ios-dynamic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FuzzerTests-ios-dynamic-Info.plist"; path = "/Users/dodikk/projects/opensource/Fuzzer/FuzzerTests-ios-dynamic-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +145,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8BFF1E8FC215004D7121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C1B1E8FC364004D7121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C251E8FC386004D7121 /* libFuzzer-lib-ios-static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C2D1E8FC5F8004D7121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C351E8FC629004D7121 /* Fuzzer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +178,8 @@
 				46932EFF1C8E177200B4903F /* FuzzerTests */,
 				46932EE41C8E146600B4903F /* Products */,
 				0DF3DB3C1E814F890027A321 /* Fuzzer-ios-dynamic-Info.plist */,
+				7EAD8C221E8FC364004D7121 /* FuzzerTests-ios-static-lib-Info.plist */,
+				7EAD8C341E8FC5F8004D7121 /* FuzzerTests-ios-dynamic-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +189,9 @@
 				46932EF21C8E175400B4903F /* Fuzzer.framework */,
 				46932EFE1C8E177200B4903F /* FuzzerTests.xctest */,
 				0DF3DB3B1E814F890027A321 /* Fuzzer.framework */,
+				7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */,
+				7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */,
+				7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +375,59 @@
 			productReference = 46932EFE1C8E177200B4903F /* FuzzerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAD8C0A1E8FC216004D7121 /* Build configuration list for PBXNativeTarget "Fuzzer-lib-ios-static" */;
+			buildPhases = (
+				7EAD8BFE1E8FC215004D7121 /* Sources */,
+				7EAD8BFF1E8FC215004D7121 /* Frameworks */,
+				7EAD8C001E8FC215004D7121 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuzzer-lib-ios-static";
+			productName = "Fuzzer-lib-ios-static";
+			productReference = 7EAD8C021E8FC215004D7121 /* libFuzzer-lib-ios-static.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7EAD8C141E8FC364004D7121 /* FuzzerTests-ios-static-lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAD8C1E1E8FC364004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-static-lib" */;
+			buildPhases = (
+				7EAD8C171E8FC364004D7121 /* Sources */,
+				7EAD8C1B1E8FC364004D7121 /* Frameworks */,
+				7EAD8C1D1E8FC364004D7121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAD8C241E8FC382004D7121 /* PBXTargetDependency */,
+			);
+			name = "FuzzerTests-ios-static-lib";
+			productName = MutationTests;
+			productReference = 7EAD8C211E8FC364004D7121 /* FuzzerTests-ios-static-lib.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7EAD8C261E8FC5F8004D7121 /* FuzzerTests-ios-dynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAD8C301E8FC5F8004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-dynamic" */;
+			buildPhases = (
+				7EAD8C291E8FC5F8004D7121 /* Sources */,
+				7EAD8C2D1E8FC5F8004D7121 /* Frameworks */,
+				7EAD8C2F1E8FC5F8004D7121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAD8C371E8FC62D004D7121 /* PBXTargetDependency */,
+			);
+			name = "FuzzerTests-ios-dynamic";
+			productName = MutationTests;
+			productReference = 7EAD8C331E8FC5F8004D7121 /* FuzzerTests-ios-dynamic.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,6 +443,9 @@
 					};
 					46932EFD1C8E177200B4903F = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					7EAD8C011E8FC215004D7121 = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -335,6 +464,9 @@
 				46932EF11C8E175400B4903F /* Fuzzer */,
 				46932EFD1C8E177200B4903F /* FuzzerTests */,
 				0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */,
+				7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */,
+				7EAD8C141E8FC364004D7121 /* FuzzerTests-ios-static-lib */,
+				7EAD8C261E8FC5F8004D7121 /* FuzzerTests-ios-dynamic */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +487,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		46932EFC1C8E177200B4903F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C1D1E8FC364004D7121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C2F1E8FC5F8004D7121 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,6 +546,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAD8BFE1E8FC215004D7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C101E8FC26E004D7121 /* FZRRunner.m in Sources */,
+				7EAD8C0E1E8FC26E004D7121 /* FZRReport.m in Sources */,
+				7EAD8C0F1E8FC26E004D7121 /* FZRMutationFactory.m in Sources */,
+				7EAD8C0D1E8FC26E004D7121 /* FZRNodeReplacement.m in Sources */,
+				7EAD8C0C1E8FC26E004D7121 /* FZRReplaceNodeMutation.m in Sources */,
+				7EAD8C0B1E8FC26E004D7121 /* FZRDeleteNodeMutation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C171E8FC364004D7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C181E8FC364004D7121 /* DeleteNodeMutationTests.m in Sources */,
+				7EAD8C191E8FC364004D7121 /* ReplaceNodeMutationTests.m in Sources */,
+				7EAD8C1A1E8FC364004D7121 /* RunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAD8C291E8FC5F8004D7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAD8C2A1E8FC5F8004D7121 /* DeleteNodeMutationTests.m in Sources */,
+				7EAD8C2B1E8FC5F8004D7121 /* ReplaceNodeMutationTests.m in Sources */,
+				7EAD8C2C1E8FC5F8004D7121 /* RunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -407,6 +586,16 @@
 			isa = PBXTargetDependency;
 			target = 46932EF11C8E175400B4903F /* Fuzzer */;
 			targetProxy = 46932F041C8E177200B4903F /* PBXContainerItemProxy */;
+		};
+		7EAD8C241E8FC382004D7121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAD8C011E8FC215004D7121 /* Fuzzer-lib-ios-static */;
+			targetProxy = 7EAD8C231E8FC382004D7121 /* PBXContainerItemProxy */;
+		};
+		7EAD8C371E8FC62D004D7121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DF3DB251E814F890027A321 /* Fuzzer-iOS-dynamic */;
+			targetProxy = 7EAD8C361E8FC62D004D7121 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -455,17 +644,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -481,8 +681,15 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -498,17 +705,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -518,8 +736,15 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -594,6 +819,83 @@
 			};
 			name = Release;
 		};
+		7EAD8C081E8FC216004D7121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7EAD8C091E8FC216004D7121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EAD8C1F1E8FC364004D7121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-static-lib-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EAD8C201E8FC364004D7121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-static-lib-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		7EAD8C311E8FC5F8004D7121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-dynamic-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EAD8C321E8FC5F8004D7121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "FuzzerTests-ios-dynamic-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lowlevelbits.FuzzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -629,6 +931,32 @@
 			buildConfigurations = (
 				46932F071C8E177200B4903F /* Debug */,
 				46932F081C8E177200B4903F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAD8C0A1E8FC216004D7121 /* Build configuration list for PBXNativeTarget "Fuzzer-lib-ios-static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAD8C081E8FC216004D7121 /* Debug */,
+				7EAD8C091E8FC216004D7121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EAD8C1E1E8FC364004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-static-lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAD8C1F1E8FC364004D7121 /* Debug */,
+				7EAD8C201E8FC364004D7121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAD8C301E8FC5F8004D7121 /* Build configuration list for PBXNativeTarget "FuzzerTests-ios-dynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAD8C311E8FC5F8004D7121 /* Debug */,
+				7EAD8C321E8FC5F8004D7121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

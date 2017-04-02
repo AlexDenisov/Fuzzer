@@ -8,7 +8,7 @@
 
 @interface FZRReplaceNodeMutation ()
 
-@property FZRNodeReplacement *replacement;
+@property (atomic) FZRNodeReplacement *replacement;
 
 @end
 

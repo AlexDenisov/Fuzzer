@@ -7,8 +7,8 @@
 
 @interface FZRReport ()
 
-@property NSDictionary *mutant;
-@property NSException *exception;
+@property (atomic) NSDictionary *mutant;
+@property (atomic) NSException *exception;
 
 @end
 
