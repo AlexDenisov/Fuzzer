@@ -8,6 +8,8 @@
 @protocol FZRMutation;
 @class FZRNodeReplacement;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FZRMutationFactory : NSObject
 
 + (id<FZRMutation>)builtinDeleteNodeMutation;
@@ -17,3 +19,5 @@
 + (id<FZRMutation>)replaceNodeMutationWithReplacement:(FZRNodeReplacement *)replacement;
 
 @end
+
+NS_ASSUME_NONNULL_END

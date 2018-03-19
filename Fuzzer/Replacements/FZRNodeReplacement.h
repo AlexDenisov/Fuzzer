@@ -5,9 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FZRNodeReplacement : NSObject
 
-+ (instancetype)replacementWithValue:(id)value;
++ (instancetype)replacementWithValue:(nullable id)value;
 
 + (NSArray <FZRNodeReplacement *> *)builtinReplacements;
 
@@ -20,6 +22,8 @@
 + (instancetype)nullReplacement;
 + (instancetype)nilReplacement;
 
-- (id)value;
+- (nullable id)value;
 
 @end
+
+NS_ASSUME_NONNULL_END
