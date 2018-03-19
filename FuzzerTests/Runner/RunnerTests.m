@@ -32,7 +32,7 @@
     FZRReport *firstnameLessReport = [FZRReport reportWithMutant:@{@"last name" : @"Doe"} exception:exception];
     FZRReport *lastnameLessReport = [FZRReport reportWithMutant:@{@"first name" : @"John"} exception:exception];
 
-    XCTAssertEqual(reports.count, 2);
+    XCTAssertEqual(reports.count, 2u);
 
     XCTAssertTrue([reports containsObject:firstnameLessReport]);
     XCTAssertTrue([reports containsObject:lastnameLessReport]);
@@ -50,7 +50,7 @@
         // all good
     }];
 
-    XCTAssertEqual(reports.count, 0);
+    XCTAssertEqual(reports.count, 0u);
 }
 
 - (void)test_applies_delete_node_mutations {
@@ -83,7 +83,7 @@
         [mutants addObject:mutant];
     }];
 
-    XCTAssertEqual(mutants.count, 3);
+    XCTAssertEqual(mutants.count, 3u);
 
     XCTAssertTrue([mutants containsObject:firstnameLessMutant]);
     XCTAssertTrue([mutants containsObject:lastnameLessMutant]);
@@ -98,7 +98,7 @@
     };
 
     FZRRunner *runner = [FZRRunner runnerWithMutations:@[[FZRMutationFactory builtinDeleteNodeMutation]] forSample:sample];
-    XCTAssertEqual(runner.amountOfMutants, 3);
+    XCTAssertEqual(runner.amountOfMutants, 3u);
 }
 
 - (void)test_complex_mutator_calculates_amount_of_mutations {
@@ -116,7 +116,7 @@
     [mutations addObject:[FZRMutationFactory builtinDeleteNodeMutation]];
 
     FZRRunner *runner = [FZRRunner runnerWithMutations:mutations forSample:sample];
-    XCTAssertEqual(runner.amountOfMutants, 12);
+    XCTAssertEqual(runner.amountOfMutants, 12u);
 }
 
 - (void)test_all_mutations {
@@ -127,7 +127,7 @@
     };
 
     FZRRunner *runner = [FZRRunner runnerWithBuiltinMutationsForSample:sample];
-    XCTAssertEqual(runner.amountOfMutants, 27, @"(All ReplaceNode mutations + DeleteNode mutations) * sample.count");
+    XCTAssertEqual(runner.amountOfMutants, 27u, @"(All ReplaceNode mutations + DeleteNode mutations) * sample.count");
 }
 
 @end
