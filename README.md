@@ -45,7 +45,7 @@ Get the latest [component .make file for Fuzzer](https://github.com/AlexDenisov/
 #### CocoaPods
 
 ```ruby
-pod 'Fuzzer', '0.3.0'
+pod 'Fuzzer', '0.3.2'
 ```
 
 #### Carthage
@@ -59,14 +59,14 @@ github "AlexDenisov/Fuzzer"
 Please consider [Carthage Documentation](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md) if you want to install a specific version of Fuzzer or make any advanced setup.
 
 ```
-Note : Carthage support has been introduded in v0.3.1 
-So older versions of Fuzzer cannot be installd with Carthage.
+Note : Carthage support has been introduded in v0.3.1
+So older versions of Fuzzer cannot be installed with Carthage.
 ```
 
 
 #### Building From Source
 
-Typically, you won't have to do this. But if you do, a preferred approach for building from source is using [sub-projects](https://www.cocoanetics.com/2011/12/sub-projects-in-xcode/). 
+Typically, you won't have to do this. But if you do, a preferred approach for building from source is using [sub-projects](https://www.cocoanetics.com/2011/12/sub-projects-in-xcode/).
 
 
 You can use either of the targets below depending on your needs:
