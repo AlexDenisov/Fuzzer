@@ -5,8 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol FZRMutation <NSObject>
 
 - (NSDictionary *)mutateSample:(NSDictionary *)sample atNode:(NSString *)nodeName;
 
 @end
+
+NS_ASSUME_NONNULL_END

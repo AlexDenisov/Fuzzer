@@ -5,6 +5,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FZRReport : NSObject
 
 + (instancetype)reportWithMutant:(NSDictionary *)mutant exception:(NSException *)exception;
@@ -13,3 +15,5 @@
 - (NSException *)exception;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -5,7 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RunnerBlock)(NSDictionary *mutant);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^RunnerBlock)(NSDictionary *_Nonnull mutant);
 
 @protocol FZRMutation;
 @class FZRReport;
@@ -19,3 +21,5 @@ typedef void (^RunnerBlock)(NSDictionary *mutant);
 - (NSArray <FZRReport *> *)enumerateMutantsUsingBlock:(RunnerBlock)runnerBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END
