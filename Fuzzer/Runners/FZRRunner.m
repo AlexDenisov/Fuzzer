@@ -18,6 +18,9 @@
 @implementation FZRRunner
 
 + (instancetype)runnerWithMutations:(NSArray <id <FZRMutation>> *)mutations forSample:(NSDictionary *)sample {
+    NSParameterAssert(mutations.count > 0);
+    NSParameterAssert(sample != nil);
+
     FZRRunner *runner = [FZRRunner new];
 
     runner.mutations = mutations;
